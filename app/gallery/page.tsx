@@ -2,7 +2,6 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { useState } from 'react';
 import { FaFacebook, FaFootballBall, FaInstagram, FaTwitter } from 'react-icons/fa';
 
 const cricketImages = ['/cricket.jpg', '/cricket.jpg', '/cricket.jpg', '/cricket.jpg'];
