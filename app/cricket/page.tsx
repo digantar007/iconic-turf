@@ -1,11 +1,11 @@
 import React from 'react'
 
-const cricket = () => {
+const page = () => {
   return (
     <div>
-      <h1>cricket</h1>
+      Test
     </div>
   )
 }
 
-export default cricket
+export default page
