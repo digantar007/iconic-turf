@@ -8,6 +8,7 @@ export default function Home() {
   const pathname = usePathname();
 
   return (
+    <>
     <div className="min-h-screen bg-green-100 text-green-900">
       {/* Navbar */}
       <nav className="navbar px-4 py-2 bg-white bg-opacity-80 shadow-md flex items-center justify-between">
@@ -126,12 +127,12 @@ export default function Home() {
       <div className="p-4 bg-gray-700 rounded-md">
         <h3 className="text-lg font-bold text-white">New Cricket Academy Opening</h3>
         <p className="text-sm text-gray-400">Our brand-new cricket academy opens this summer!</p>
-        <Link href="/news1" className="text-blue-400 inline-block mt-2">Read More →</a>
+        <Link href="/news1" className="text-blue-400 inline-block mt-2">Read More →</Link>
       </div>
       <div className="p-4 bg-gray-700 rounded-md">
         <h3 className="text-lg font-bold text-white">Football Championship Highlights</h3>
         <p className="text-sm text-gray-400">Catch the thrilling moments from our recent tournament.</p>
-        <Link href="/news2" className="text-blue-400 inline-block mt-2">View Highlights →</a>
+        <Link href="/news2" className="text-blue-400 inline-block mt-2">View Highlights →</Link> 
       </div>
       
     </div>
@@ -157,7 +158,7 @@ export default function Home() {
       />
       <h3 className="text-lg font-bold mt-2 text-white">🏅 Turf Championship 2025</h3>
       <p className="text-sm  text-white">📅 March 15, 2025</p>
-      <Link href="/event1" className="text-blue-400 inline-block mt-2">View Details →</a>
+      <Link href="/event1" className="text-blue-400 inline-block mt-2">View Details →</Link> 
     </div>
 
     {/* Event 2 */}
@@ -169,7 +170,7 @@ export default function Home() {
       />
       <h3 className="text-lg font-bold mt-2 text-white">⚽ Football Fiesta 2025</h3>
       <p className="text-sm  text-white">📅 April 20, 2025</p>
-      <Link href="/event2" className="text-blue-400 inline-block mt-2">View Details →</a>
+      <Link href="/event2" className="text-blue-400 inline-block mt-2">View Details →</Link> 
     </div>
 
     {/* Event 3 */}
@@ -181,7 +182,7 @@ export default function Home() {
       />
       <h3 className="text-lg font-bold mt-2 text-white">🎯 Archery Showdown 2025</h3>
       <p className="text-sm  text-white">📅 May 10, 2025</p>
-      <Link href="/event3" className="text-blue-400 inline-block mt-2">View Details →</a>
+      <Link href="/event3" className="text-blue-400 inline-block mt-2">View Details →</Link> 
     </div>
   </div>
 
@@ -212,10 +213,10 @@ export default function Home() {
     <div>
       <h2 className="text-xl font-bold mb-4">Quick Links</h2>
       <ul className="space-y-2 text-sm">
-        <li><Link href="/" className="hover:text-blue-400 transition">Home</a></li>
-        <li><Link href="/about" className="hover:text-blue-400 transition">About Us</a></li>
-        <li><Link href="/gallery" className="hover:text-blue-400 transition">Gallery</a></li>
-        <li><Link href="/contact" className="hover:text-blue-400 transition">Contact</a></li>
+        <li><Link href="/" className="hover:text-blue-400 transition">Home</Link> </li>
+        <li><Link href="/about" className="hover:text-blue-400 transition">About Us</Link> </li>
+        <li><Link href="/gallery" className="hover:text-blue-400 transition">Gallery</Link> </li>
+        <li><Link href="/contact" className="hover:text-blue-400 transition">Contact</Link> </li>
       </ul>
     </div>
 
@@ -223,15 +224,15 @@ export default function Home() {
     <div>
       <h2 className="text-xl font-bold mb-4">Contact Us</h2>
       <p className="text-sm text-white-400 mb-4">
-        📧 <Link href="mailto:info@iconicturf.com" className="hover:text-blue-400 transition">info@iconicturf.com</a><br />
-        📞 <Link href="tel:+1234567890" className="hover:text-blue-400 transition">+1 234 567 890</a>
+        📧 <Link href="mailto:info@iconicturf.com" className="hover:text-blue-400 transition">info@iconicturf.com</Link> <br />
+        📞 <Link href="tel:+1234567890" className="hover:text-blue-400 transition">+1 234 567 890</Link> 
       </p>
 
       {/* Social Icons */}
       <div className="flex gap-4 text-2xl">
-        <Link href="#" className="hover:text-blue-400 transition"><FaFacebook /></a>
-        <Link href="#" className="hover:text-blue-400 transition"><FaTwitter /></a>
-        <Link href="#" className="hover:text-blue-400 transition"><FaInstagram /></a>
+        <Link href="#" className="hover:text-blue-400 transition"><FaFacebook /></Link> 
+        <Link href="#" className="hover:text-blue-400 transition"><FaTwitter /></Link> 
+        <Link href="#" className="hover:text-blue-400 transition"><FaInstagram /></Link> 
       </div>
     </div>
   </div>
@@ -243,5 +244,6 @@ export default function Home() {
 </footer>
 
     </div>
+    </>
   );
 }
