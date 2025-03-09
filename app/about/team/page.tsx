@@ -15,29 +15,20 @@ export default function OurTeam() {
   return (
     <div className="min-h-screen bg-base-200" data-theme="luxury">
       {/* Navbar */}
-      <nav className="navbar px-4 flex items-center">
-        <div className="flex-1 flex items-center gap-2">
-          <FaFootballBall className="text-2xl" />
+      <nav className="navbar px-4 py-2 bg-white bg-opacity-80 shadow-md flex items-center justify-between">
+        <div className="flex items-center gap-2">
+          <img src="/logo.jpg" alt="Logo" className="h-6 w-6" />
           <Link href="/" className="text-lg font-bold">Iconic Turf</Link>
         </div>
-        <div className="flex-none">
-          <ul className="menu menu-horizontal px-1">
-            <li><Link href="/">Home</Link></li>
-            <li className="relative">
-              <details className="dropdown">
-                <summary className="cursor-pointer">About Us</summary>
-                <ul className="dropdown-content menu p-2 bg-base-100 rounded-box shadow-lg absolute z-10 mt-2 w-48">
-                  <li><Link href="/about/mission">Our Mission</Link></li>
-                  <li><Link href="/about/team">Our Team</Link></li>
-                  <li><Link href="/about/history">Our Legacy</Link></li>
-                </ul>
-              </details>
+        <ul className="flex space-x-6 text-md font-bold">
+          {['/', '/about', '/deals', '/gallery', '/contact'].map((path, index) => (
+            <li key={index}>
+              <Link href={path} className={pathname === path ? 'text-blue-400 font-bold' : ''}>
+                {path === '/' ? 'Home' : path.slice(1).replace(/-/g, ' ').toUpperCase()}
+              </Link>
             </li>
-            <li><Link href="/deals">Deals With</Link></li>
-            <li><Link href="/gallery">Gallery</Link></li>
-            <li><Link href="mailto:info@iconicturf.com">Contact</Link></li>
-          </ul>
-        </div>
+          ))}
+        </ul>
       </nav>
 
       {/* Hero Section */}
