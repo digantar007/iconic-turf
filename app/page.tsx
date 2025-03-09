@@ -1,10 +1,15 @@
 'use client';
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useEffect } from 'react';
 import { FaFacebook, FaTwitter, FaInstagram, FaBuilding, FaSchool, FaHome, FaRunning } from 'react-icons/fa';
 
 export default function Home() {
+  useEffect(() => {
+    AOS.init({ duration: 800, once: true });
+  }, []);
   const pathname = usePathname();
 
   return (
@@ -34,7 +39,7 @@ export default function Home() {
       </div>
 
       {/* Who We Are & Metrics Section Combined */}
-      <div className="container mx-auto py-12 px-6 text-center">
+      <div className="container mx-auto py-12 px-6 text-center" data-aos="fade-in">
         <h4 className="text-4xl font-bold mb-4">The last sports partner you will need</h4>
         <p className="text-lg max-w-3xl mx-auto mb-8">We are a passionate sports organization dedicated to promoting athletic excellence, teamwork, and community engagement. Our mission is to provide world-class training, host thrilling events, and inspire future champions.</p>
         {/* Metrics Section */}
@@ -60,7 +65,7 @@ export default function Home() {
       </div>
 
       {/* Our Expertise Section */}
-<div className="container mx-auto py-12 px-6 text-center">
+<div className="container mx-auto py-12 px-6 text-center" data-aos="fade-up">
   <h2 className="text-3xl font-bold mb-8">Our Expertise</h2>
   <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
     <Link href="/expertise/turf-infrastructure" className="p-4 bg-gray-800 rounded-lg shadow-md cursor-pointer hover:scale-105 transition-transform">
@@ -87,7 +92,7 @@ export default function Home() {
 
 
       {/* Customer Segments */}
-      <div className="container mx-auto py-12 px-6 text-center">
+      <div className="container mx-auto py-12 px-6 text-center" data-aos="zoom-in">
         <h2 className="text-3xl font-bold mb-8">Our Customer Segments</h2>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           <div className="p-4 bg-gray-800 rounded-lg shadow-md flex items-center gap-2 text-white">
@@ -106,7 +111,7 @@ export default function Home() {
       </div>
 
       {/* We are Proud to Work With */}
-<div className="container mx-auto py-12 px-6 text-center">
+<div className="container mx-auto py-12 px-6 text-center" data-aos="zoom-out">
   <h2 className="text-3xl font-bold mb-8">We Are Proud to Work With These Companies</h2>
   <div className="flex flex-wrap justify-center gap-8">
     <img src="/p1.jpg" alt="Company 1" className="h-16 w-auto" />
@@ -118,7 +123,7 @@ export default function Home() {
 
 
 {/* Latest News & Upcoming Events */}
-<div className="container mx-auto py-12 px-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+<div className="container mx-auto py-12 px-6 grid grid-cols-1 md:grid-cols-2 gap-6" data-aos="slide-up">
 
   {/* Latest News Section */}
   <div className="p-4 bg-gray-800 rounded-lg shadow-md">
@@ -198,7 +203,7 @@ export default function Home() {
 
 
       {/* Footer Section */}
-<footer className="footer w-full p-6 bg-green-700 text-white text-center">
+<footer className="footer w-full p-6 bg-green-700 text-white text-center" data-aos="fade-in" data-aos-duration="300">
   <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-6">
 
     {/* About Section */}
