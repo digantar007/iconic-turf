@@ -12,7 +12,7 @@ export default function Home() {
       {/* Navbar a*/}
       <nav className="navbar px-4 py-2 bg-white bg-opacity-80 shadow-md flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <img src="/logo.jpg" alt="Logo" className="h-6 w-6" />
+          <Image  src="/logo.jpg" alt="Logo" className="h-6 w-6" />
           <Link href="/" className="text-lg font-bold">Iconic Turf</Link>
         </div>
         <ul className="flex space-x-6 text-md font-bold">
@@ -63,19 +63,19 @@ export default function Home() {
   <h2 className="text-3xl font-bold mb-8">Our Expertise</h2>
   <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
     <Link href="/expertise/turf-infrastructure" className="p-4 bg-gray-800 rounded-lg shadow-md cursor-pointer hover:scale-105 transition-transform">
-      <img src="/bg1.jpg" alt="Turf" className="rounded-md mb-4" />
+      <Image  src="/bg1.jpg" alt="Turf" className="rounded-md mb-4" />
       <h3 className="text-xl font-bold text-white">Building Turf Infrastructure</h3>
       <p className="text-sm text-gray-400">Crafting world-class turfs for unmatched sports experiences.</p>
     </Link>
 
     <Link href="/expertise/coaching-students" className="p-4 bg-gray-800 rounded-lg shadow-md cursor-pointer hover:scale-105 transition-transform">
-      <img src="/ballbg.jpg" alt="Coaching" className="rounded-md mb-4" />
+      <Image  src="/ballbg.jpg" alt="Coaching" className="rounded-md mb-4" />
       <h3 className="text-xl font-bold text-white">Coaching Students</h3>
       <p className="text-sm text-gray-400">Empowering athletes with expert guidance and mentorship.</p>
     </Link>
 
     <Link href="/expertise/building-community" className="p-4 bg-gray-800 rounded-lg shadow-md cursor-pointer hover:scale-105 transition-transform">
-      <img src="/hero-bg.jpg" alt="Community" className="rounded-md mb-4" />
+      <Image  src="/hero-bg.jpg" alt="Community" className="rounded-md mb-4" />
       <h3 className="text-xl font-bold text-white">Building Community</h3>
       <p className="text-sm text-gray-400">Creating a thriving sports culture through engagement.</p>
     </Link>
@@ -108,10 +108,10 @@ export default function Home() {
 <div className="container mx-auto py-12 px-6 text-center">
   <h2 className="text-3xl font-bold mb-8">We Are Proud to Work With These Companies</h2>
   <div className="flex flex-wrap justify-center gap-8">
-    <img src="/p1.jpg" alt="Company 1" className="h-16 w-auto" />
-    <img src="/p2.jpg" alt="Company 2" className="h-16 w-auto" />
-    <img src="/p1.jpg" alt="Company 3" className="h-16 w-auto" />
-    <img src="/p2.jpg" alt="Company 3" className="h-16 w-auto" />
+    <Image  src="/p1.jpg" alt="Company 1" className="h-16 w-auto" />
+    <Image  src="/p2.jpg" alt="Company 2" className="h-16 w-auto" />
+    <Image  src="/p1.jpg" alt="Company 3" className="h-16 w-auto" />
+    <Image  src="/p2.jpg" alt="Company 3" className="h-16 w-auto" />
   </div>
 </div>
 
@@ -150,7 +150,7 @@ export default function Home() {
   >
     {/* Event 1 */}
     <div className="carousel-item w-64 min-w-[280px] p-4 bg-blue-700 rounded-md shadow-md hover:shadow-lg transition-transform transform hover:scale-105 cursor-pointer">
-      <img 
+      <Image  
         src="/event1.jpg" 
         alt="Event 1" 
         className="w-full h-36 object-cover rounded-md"
@@ -162,7 +162,7 @@ export default function Home() {
 
     {/* Event 2 */}
     <div className="carousel-item w-64 min-w-[280px] p-4 bg-green-700 rounded-md shadow-md hover:shadow-lg transition-transform transform hover:scale-105 cursor-pointer">
-      <img 
+      <Image  
         src="/event2.jpg" 
         alt="Event 2" 
         className="w-full h-36 object-cover rounded-md"
@@ -174,7 +174,7 @@ export default function Home() {
 
     {/* Event 3 */}
     <div className="carousel-item w-64 min-w-[280px] p-4 bg-red-700 rounded-md shadow-md hover:shadow-lg transition-transform transform hover:scale-105 cursor-pointer">
-      <img 
+      <Image  
         src="/event3.jpg" 
         alt="Event 3" 
         className="w-full h-36 object-cover rounded-md"
