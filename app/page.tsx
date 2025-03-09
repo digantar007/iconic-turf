@@ -9,10 +9,10 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-green-100 text-green-900">
-      {/* Navbar a*/}
+      {/* Navbar */}
       <nav className="navbar px-4 py-2 bg-white bg-opacity-80 shadow-md flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <Image  src="/logo.jpg" alt="Logo" className="h-6 w-6" />
+          <img src="/logo.jpg" alt="Logo" className="h-6 w-6" />
           <Link href="/" className="text-lg font-bold">Iconic Turf</Link>
         </div>
         <ul className="flex space-x-6 text-md font-bold">
@@ -63,19 +63,19 @@ export default function Home() {
   <h2 className="text-3xl font-bold mb-8">Our Expertise</h2>
   <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
     <Link href="/expertise/turf-infrastructure" className="p-4 bg-gray-800 rounded-lg shadow-md cursor-pointer hover:scale-105 transition-transform">
-      <Image  src="/bg1.jpg" alt="Turf" className="rounded-md mb-4" />
+      <img src="/bg1.jpg" alt="Turf" className="rounded-md mb-4" />
       <h3 className="text-xl font-bold text-white">Building Turf Infrastructure</h3>
       <p className="text-sm text-gray-400">Crafting world-class turfs for unmatched sports experiences.</p>
     </Link>
 
     <Link href="/expertise/coaching-students" className="p-4 bg-gray-800 rounded-lg shadow-md cursor-pointer hover:scale-105 transition-transform">
-      <Image  src="/ballbg.jpg" alt="Coaching" className="rounded-md mb-4" />
+      <img src="/ballbg.jpg" alt="Coaching" className="rounded-md mb-4" />
       <h3 className="text-xl font-bold text-white">Coaching Students</h3>
       <p className="text-sm text-gray-400">Empowering athletes with expert guidance and mentorship.</p>
     </Link>
 
     <Link href="/expertise/building-community" className="p-4 bg-gray-800 rounded-lg shadow-md cursor-pointer hover:scale-105 transition-transform">
-      <Image  src="/hero-bg.jpg" alt="Community" className="rounded-md mb-4" />
+      <img src="/hero-bg.jpg" alt="Community" className="rounded-md mb-4" />
       <h3 className="text-xl font-bold text-white">Building Community</h3>
       <p className="text-sm text-gray-400">Creating a thriving sports culture through engagement.</p>
     </Link>
@@ -108,10 +108,10 @@ export default function Home() {
 <div className="container mx-auto py-12 px-6 text-center">
   <h2 className="text-3xl font-bold mb-8">We Are Proud to Work With These Companies</h2>
   <div className="flex flex-wrap justify-center gap-8">
-    <Image  src="/p1.jpg" alt="Company 1" className="h-16 w-auto" />
-    <Image  src="/p2.jpg" alt="Company 2" className="h-16 w-auto" />
-    <Image  src="/p1.jpg" alt="Company 3" className="h-16 w-auto" />
-    <Image  src="/p2.jpg" alt="Company 3" className="h-16 w-auto" />
+    <img src="/p1.jpg" alt="Company 1" className="h-16 w-auto" />
+    <img src="/p2.jpg" alt="Company 2" className="h-16 w-auto" />
+    <img src="/p1.jpg" alt="Company 3" className="h-16 w-auto" />
+    <img src="/p2.jpg" alt="Company 3" className="h-16 w-auto" />
   </div>
 </div>
 
@@ -126,12 +126,12 @@ export default function Home() {
       <div className="p-4 bg-gray-700 rounded-md">
         <h3 className="text-lg font-bold text-white">New Cricket Academy Opening</h3>
         <p className="text-sm text-gray-400">Our brand-new cricket academy opens this summer!</p>
-        <a href="/news1" className="text-blue-400 inline-block mt-2">Read More →</a>
+        <Link href="/news1" className="text-blue-400 inline-block mt-2">Read More →</a>
       </div>
       <div className="p-4 bg-gray-700 rounded-md">
         <h3 className="text-lg font-bold text-white">Football Championship Highlights</h3>
         <p className="text-sm text-gray-400">Catch the thrilling moments from our recent tournament.</p>
-        <a href="/news2" className="text-blue-400 inline-block mt-2">View Highlights →</a>
+        <Link href="/news2" className="text-blue-400 inline-block mt-2">View Highlights →</a>
       </div>
       
     </div>
@@ -150,38 +150,38 @@ export default function Home() {
   >
     {/* Event 1 */}
     <div className="carousel-item w-64 min-w-[280px] p-4 bg-blue-700 rounded-md shadow-md hover:shadow-lg transition-transform transform hover:scale-105 cursor-pointer">
-      <Image  
+      <img 
         src="/event1.jpg" 
         alt="Event 1" 
         className="w-full h-36 object-cover rounded-md"
       />
       <h3 className="text-lg font-bold mt-2 text-white">🏅 Turf Championship 2025</h3>
       <p className="text-sm  text-white">📅 March 15, 2025</p>
-      <a href="/event1" className="text-blue-400 inline-block mt-2">View Details →</a>
+      <Link href="/event1" className="text-blue-400 inline-block mt-2">View Details →</a>
     </div>
 
     {/* Event 2 */}
     <div className="carousel-item w-64 min-w-[280px] p-4 bg-green-700 rounded-md shadow-md hover:shadow-lg transition-transform transform hover:scale-105 cursor-pointer">
-      <Image  
+      <img 
         src="/event2.jpg" 
         alt="Event 2" 
         className="w-full h-36 object-cover rounded-md"
       />
       <h3 className="text-lg font-bold mt-2 text-white">⚽ Football Fiesta 2025</h3>
       <p className="text-sm  text-white">📅 April 20, 2025</p>
-      <a href="/event2" className="text-blue-400 inline-block mt-2">View Details →</a>
+      <Link href="/event2" className="text-blue-400 inline-block mt-2">View Details →</a>
     </div>
 
     {/* Event 3 */}
     <div className="carousel-item w-64 min-w-[280px] p-4 bg-red-700 rounded-md shadow-md hover:shadow-lg transition-transform transform hover:scale-105 cursor-pointer">
-      <Image  
+      <img 
         src="/event3.jpg" 
         alt="Event 3" 
         className="w-full h-36 object-cover rounded-md"
       />
       <h3 className="text-lg font-bold mt-2 text-white">🎯 Archery Showdown 2025</h3>
       <p className="text-sm  text-white">📅 May 10, 2025</p>
-      <a href="/event3" className="text-blue-400 inline-block mt-2">View Details →</a>
+      <Link href="/event3" className="text-blue-400 inline-block mt-2">View Details →</a>
     </div>
   </div>
 
@@ -212,10 +212,10 @@ export default function Home() {
     <div>
       <h2 className="text-xl font-bold mb-4">Quick Links</h2>
       <ul className="space-y-2 text-sm">
-        <li><a href="/" className="hover:text-blue-400 transition">Home</a></li>
-        <li><a href="/about" className="hover:text-blue-400 transition">About Us</a></li>
-        <li><a href="/gallery" className="hover:text-blue-400 transition">Gallery</a></li>
-        <li><a href="/contact" className="hover:text-blue-400 transition">Contact</a></li>
+        <li><Link href="/" className="hover:text-blue-400 transition">Home</a></li>
+        <li><Link href="/about" className="hover:text-blue-400 transition">About Us</a></li>
+        <li><Link href="/gallery" className="hover:text-blue-400 transition">Gallery</a></li>
+        <li><Link href="/contact" className="hover:text-blue-400 transition">Contact</a></li>
       </ul>
     </div>
 
@@ -223,15 +223,15 @@ export default function Home() {
     <div>
       <h2 className="text-xl font-bold mb-4">Contact Us</h2>
       <p className="text-sm text-white-400 mb-4">
-        📧 <a href="mailto:info@iconicturf.com" className="hover:text-blue-400 transition">info@iconicturf.com</a><br />
-        📞 <a href="tel:+1234567890" className="hover:text-blue-400 transition">+1 234 567 890</a>
+        📧 <Link href="mailto:info@iconicturf.com" className="hover:text-blue-400 transition">info@iconicturf.com</a><br />
+        📞 <Link href="tel:+1234567890" className="hover:text-blue-400 transition">+1 234 567 890</a>
       </p>
 
       {/* Social Icons */}
       <div className="flex gap-4 text-2xl">
-        <a href="#" className="hover:text-blue-400 transition"><FaFacebook /></a>
-        <a href="#" className="hover:text-blue-400 transition"><FaTwitter /></a>
-        <a href="#" className="hover:text-blue-400 transition"><FaInstagram /></a>
+        <Link href="#" className="hover:text-blue-400 transition"><FaFacebook /></a>
+        <Link href="#" className="hover:text-blue-400 transition"><FaTwitter /></a>
+        <Link href="#" className="hover:text-blue-400 transition"><FaInstagram /></a>
       </div>
     </div>
   </div>
