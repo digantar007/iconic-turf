@@ -9,7 +9,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-green-100 text-green-900">
-      {/* Navbar */}
+      {/* Navbar a*/}
       <nav className="navbar px-4 py-2 bg-white bg-opacity-80 shadow-md flex items-center justify-between">
         <div className="flex items-center gap-2">
           <img src="/logo.jpg" alt="Logo" className="h-6 w-6" />
