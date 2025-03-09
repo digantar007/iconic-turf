@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { FaFacebook, FaFootballBall, FaInstagram, FaTwitter } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa';
 
 const cricketImages = ['/cricket.jpg', '/cricket.jpg', '/cricket.jpg', '/cricket.jpg'];
 const footballImages = ['/football.jpg', '/football.jpg', '/football.jpg', '/football.jpg'];

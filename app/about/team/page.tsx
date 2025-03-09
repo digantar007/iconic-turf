@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { FaFacebook, FaFootballBall, FaInstagram, FaTwitter } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa';
 
 const teamMembers = [
   { name: 'John Doe', role: 'Founder & CEO', image: '/avatar.jpg' },

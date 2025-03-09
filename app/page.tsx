@@ -34,7 +34,7 @@ export default function Home() {
 
       {/* Who We Are & Metrics Section Combined */}
       <div className="container mx-auto py-12 px-6 text-center">
-        <h4 className="text-4xl font-bold mb-4">The last sports partner you'll need</h4>
+        <h4 className="text-4xl font-bold mb-4">The last sports partner you will need</h4>
         <p className="text-lg max-w-3xl mx-auto mb-8">We are a passionate sports organization dedicated to promoting athletic excellence, teamwork, and community engagement. Our mission is to provide world-class training, host thrilling events, and inspire future champions.</p>
         {/* Metrics Section */}
 <div className="container mx-auto py-12 px-6 text-center">
