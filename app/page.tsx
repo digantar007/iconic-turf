@@ -154,11 +154,11 @@ export default function Home() {
             <Carousel className="w-full">
               <CarouselContent className="-ml-1">
                 {[
-                  { image: '/e1.jpg', title: 'Football Tournament', desc: 'Experience the ultimate cricket showdown.' },
-                  { image: '/e1.jpg', title: 'Cricket League', desc: 'Experience the ultimate cricket showdown.' },
-                  { image: '/e1.jpg', title: 'Marathon Run', desc: 'Run for a cause and challenge yourself.' },
-                  { image: '/e1.jpg', title: 'Marathon Run', desc: 'Run for a cause and challenge yourself.' },
-                  { image: '/e1.jpg', title: 'Marathon Run', desc: 'Run for a cause and challenge yourself.' }
+                  { image: '/E1.jpg', title: 'Football Tournament', desc: 'Experience the ultimate cricket showdown.' },
+                  { image: '/E1.jpg', title: 'Cricket League', desc: 'Experience the ultimate cricket showdown.' },
+                  { image: '/E1.jpg', title: 'Marathon Run', desc: 'Run for a cause and challenge yourself.' },
+                  { image: '/E1.jpg', title: 'Marathon Run', desc: 'Run for a cause and challenge yourself.' },
+                  { image: '/E1.jpg', title: 'Marathon Run', desc: 'Run for a cause and challenge yourself.' }
                 ].map((event, index) => (
                   <CarouselItem key={index} className="pl-1 md:basis-1/1 lg:basis-1/2 max-h-80 min-w-1/2">
                     <div className="p-1">
