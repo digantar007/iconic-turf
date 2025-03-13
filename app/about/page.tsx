@@ -1,41 +1,12 @@
-"use client";
+'use client';
 
-import { useState } from "react";
+import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
 
-const sportsCategories = [
-  { name: "All", value: "all" },
-  { name: "Cricket", value: "cricket" },
-  { name: "Football", value: "football" },
-  { name: "Hockey", value: "hockey" },
-  { name: "Badminton", value: "badminton" },
-  { name: "Tennis", value: "tennis" },
-  { name: "Basketball", value: "basketball" },
-  { name: "Volleyball", value: "volleyball" },
-];
-
-const galleryImages = [
-  { src: "/gallery/cricket1.jpg", category: "cricket" },
-  { src: "/gallery/football1.jpg", category: "football" },
-  { src: "/gallery/hockey1.jpg", category: "hockey" },
-  { src: "/gallery/badminton1.jpg", category: "badminton" },
-  { src: "/gallery/tennis1.jpg", category: "tennis" },
-  { src: "/gallery/basketball1.jpg", category: "basketball" },
-  { src: "/gallery/volleyball1.jpg", category: "volleyball" },
-  { src: "/gallery/football2.jpg", category: "football" },
-  { src: "/gallery/cricket2.jpg", category: "cricket" },
-];
-
-export default function GalleryPage() {
+export default function AboutUs() {
   const pathname = usePathname();
-  const [selectedSport, setSelectedSport] = useState("all");
-
-  const filteredImages = selectedSport === "all"
-    ? galleryImages
-    : galleryImages.filter(img => img.category === selectedSport);
-
   return (
     <div className="min-h-screen bg-green-100 text-green-800 font-oswald">
       {/* Navbar */}
@@ -54,35 +25,25 @@ export default function GalleryPage() {
           ))}
         </ul>
       </nav>
-      <div className="container mx-auto py-12 px-6">
-        <div className="hero h-96 bg-[url('/bg.jpg')] bg-cover bg-center text-center flex flex-col justify-center items-center bg-black bg-opacity-60">
-          <h1 className="text-6xl font-extrabold text-white">Sports Gallery</h1>
-          <p className="text-lg mt-4 max-w-2xl text-white">Empowering champions through sportsmanship, dedication, and excellence.</p>
+      <div className="min-h-screen px-6 py-12">
+        {/* Hero Section */}
+        <div className="hero h-64 bg-[url('/bg.jpg')] bg-cover bg-center flex flex-col justify-center items-center text-white text-center">
+          <h1 className="text-6xl font-extrabold text-white">About Iconic Turf</h1>
+          <p className="text-lg mt-4 max-w-2xl text-white">Your premier multi-sport destination in Odisha.</p>
         </div>
 
-        {/* Filter Buttons */}
-        <div className="flex flex-wrap justify-center gap-3 mb-8 pt-10">
-          {sportsCategories.map((sport) => (
-            <button
-              key={sport.value}
-              className={`px-4 py-2 rounded-lg text-lg font-semibold transition ${selectedSport === sport.value
-                  ? "bg-green-700 text-white"
-                  : "bg-gray-200 text-gray-800 hover:bg-green-500 hover:text-white"
-                }`}
-              onClick={() => setSelectedSport(sport.value)}
-            >
-              {sport.name}
-            </button>
-          ))}
-        </div>
-
-        {/* Gallery Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {filteredImages.map((image, index) => (
-            <div key={index} className="overflow-hidden rounded-lg shadow-md">
-              <img src={image.src} alt="Gallery Image" className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300" />
-            </div>
-          ))}
+        {/* Key Points Section */}
+        <div className="container mx-auto py-12 text-center">
+          <h2 className="text-3xl font-bold text-green-700 mb-6">Key Points About Iconic Turf</h2>
+          <ul className="text-lg text-gray-700 space-y-4 max-w-3xl mx-auto text-left">
+            <li className="flex items-start gap-3"><span className="text-green-600 font-bold">✔</span> 1st Multi-Sport Turf in Odisha for Cricket and Football</li>
+            <li className="flex items-start gap-3"><span className="text-green-600 font-bold">✔</span> All-Weather Turf</li>
+            <li className="flex items-start gap-3"><span className="text-green-600 font-bold">✔</span> More than 12,500 sqft of Turf Area</li>
+            <li className="flex items-start gap-3"><span className="text-green-600 font-bold">✔</span> Mentoring Under Certified Coach</li>
+            <li className="flex items-start gap-3"><span className="text-green-600 font-bold">✔</span> Play Anytime During the Day and Night Under the Lights</li>
+            <li className="flex items-start gap-3"><span className="text-green-600 font-bold">✔</span> One-Stop Shop Destination for Corporate Events</li>
+            <li className="flex items-start gap-3"><span className="text-green-600 font-bold">✔</span> One-Stop Shop Destination for Consulting and Execution</li>
+          </ul>
         </div>
       </div>
       {/* Footer Section */}
