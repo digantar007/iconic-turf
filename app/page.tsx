@@ -30,7 +30,7 @@ export default function Home() {
         <div className="relative z-20 px-4">
           <h1 className="text-6xl font-extrabold">Welcome to Iconic Turf</h1>
           <p className="text-lg mt-4 max-w-2xl mx-auto">
-            Empowering champions through sportsmanship, dedication, and
+            Empowering sports through sportsmanship, dedication, and
             excellence.
           </p>
         </div>
@@ -41,13 +41,10 @@ export default function Home() {
         data-aos="fade-in"
       >
         <h4 className="text-3xl font-bold mb-4">
-          The last sports partner you will need
+          Your Multi-Sports Destination
         </h4>
         <p className="text-lg max-w-3xl mx-auto mb-8">
-          We are a passionate sports organization dedicated to promoting
-          athletic excellence, teamwork, and community engagement. Our mission
-          is to provide world-class training, host thrilling events, and inspire
-          future champions.
+          A professional sports organization dedicated to building world-class sports infrastructure, mentoring community youth under certified coaches, and organizing premier sports and corporate events.
         </p>
         {/* Metrics Section */}
         <div className="container mx-auto py-10 px-6 text-center">
@@ -80,25 +77,25 @@ export default function Home() {
         data-aos="fade-up"
       >
         <h2 className="text-3xl font-bold">Our Expertise</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           <Link
-            href="/building-turf"
+            href="/building-sports-infra"
             className="p-4 bg-accent rounded-lg shadow-md dark:bg-gray-800 dark:text-white cursor-pointer hover:scale-105 transition-colors"
           >
             <div className="relative w-full aspect-[4/3]">
               <Image
-                src="/bg1.jpg"
-                alt="Turf"
+                src="/bg1.jpeg"
+                alt="Building Sports Infrastructure"
                 fill
                 className="rounded-md mb-4"
                 loading="lazy"
               />
             </div>
-            <h3 className="text-2xl font-bold ">
-              Building Turf Infrastructure
+            <h3 className="text-lg font-bold ">
+              Building Sports Infrastructure
             </h3>
             <p className="text-sm ">
-              Crafting world-class turfs for unmatched sports experiences.
+              Crafting world-class infrastructure for unmatched sports experiences.
             </p>
           </Link>
           <Link
@@ -107,14 +104,14 @@ export default function Home() {
           >
             <div className="relative w-full aspect-[4/3]">
               <Image
-                src="/ballbg.jpg"
+                src="/bg2.jpeg"
                 alt="Coaching"
                 fill
                 loading="lazy"
                 className="rounded-md mb-4"
               />
             </div>
-            <h3 className="text-2xl font-bold ">Coaching Students</h3>
+            <h3 className="text-lg font-bold ">Mentoring Community Kids</h3>
             <p className="text-sm ">
               Empowering athletes with expert guidance and mentorship.
             </p>
@@ -126,16 +123,34 @@ export default function Home() {
           >
             <div className="relative w-full aspect-[4/3]">
               <Image
-                src="/hero-bg.jpg"
+                src="/bg3.jpeg"
                 alt="Community"
                 fill
                 loading="lazy"
                 className="rounded-md mb-4"
               />
             </div>
-            <h3 className="text-2xl font-bold ">Building Community</h3>
+            <h3 className="text-lg font-bold "> Organize Sports & Corporate Events</h3>
             <p className="text-sm ">
               Creating a thriving sports culture through engagement.
+            </p>
+          </Link>
+          <Link
+            href="/expertise/building-community"
+            className="p-4 bg-accent rounded-lg shadow-md dark:bg-gray-800 dark:text-white cursor-pointer hover:scale-105 transition-colors"
+          >
+            <div className="relative w-full aspect-[4/3]">
+              <Image
+                src="/bg4.jpeg"
+                alt="Community"
+                fill
+                loading="lazy"
+                className="rounded-md mb-4"
+              />
+            </div>
+            <h3 className="text-lg font-bold "> Leisure Play</h3>
+            <p className="text-sm ">
+              Book a slot for a relaxed, recreational game with friends or family. 
             </p>
           </Link>
         </div>
@@ -222,7 +237,7 @@ export default function Home() {
               <p className="text-sm ">
                 Our brand-new cricket academy opens this summer!
               </p>
-              <Link href="/news1" className="text-blue-400 inline-block mt-2">
+              <Link href="/news1" className="text-green-700 inline-block mt-2">
                 Read More →
               </Link>
             </div>
@@ -233,7 +248,7 @@ export default function Home() {
               <p className="text-sm ">
                 Catch the thrilling moments from our recent tournament.
               </p>
-              <Link href="/news2" className="text-blue-400 inline-block mt-2">
+              <Link href="/news2" className="text-green-700 inline-block mt-2">
                 View Highlights →
               </Link>
             </div>
@@ -249,22 +264,22 @@ export default function Home() {
             <CarouselContent className="-ml-1">
               {[
                 {
-                  image: "/E1.jpg",
+                  image: "/E1.jpeg",
                   title: "Football Tournament",
                   desc: "Experience the ultimate cricket showdown.",
                 },
                 {
-                  image: "/E1.jpg",
+                  image: "/E2.jpeg",
                   title: "Cricket League",
                   desc: "Experience the ultimate cricket showdown.",
                 },
                 {
-                  image: "/E1.jpg",
+                  image: "/E3.jpeg",
                   title: "Marathon Run",
                   desc: "Run for a cause and challenge yourself.",
                 },
                 {
-                  image: "/E1.jpg",
+                  image: "/E4.jpeg",
                   title: "Marathon Run",
                   desc: "Run for a cause and challenge yourself.",
                 },

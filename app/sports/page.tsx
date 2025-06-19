@@ -1,5 +1,6 @@
 "use client";
 import { Accordion, AccordionItem } from "@/components/ui/accordion";
+import Image from "next/image";
 import { useState } from "react";
 import {
   FaFutbol,
@@ -60,45 +61,54 @@ export default function SportsPage() {
   };
   return (
     <>
-      <div className="container mx-auto py-12 px-6">
-        <div className="hero h-96 bg-[url('/bg.jpg')] bg-cover bg-center text-center flex flex-col justify-center items-center bg-black bg-opacity-60">
-          <h1 className="text-6xl font-extrabold text-white">
-            Sports We Offer
-          </h1>
-          <p className="text-lg mt-4 max-w-2xl text-white">
+      {/* Hero Section */}
+      <div className="relative h-96 flex items-center justify-center text-center text-white bg-white">
+        <Image
+          src="/bg.jpg"
+          alt="Hero Background"
+          fill
+          loading="eager"
+          priority
+          className="object-cover z-0"
+        />
+        <div className="absolute inset-0 bg-black bg-opacity-10 z-10"></div>
+
+        <div className="relative z-20 px-4">
+          <h1 className="text-6xl font-extrabold">Sports We Offer</h1>
+          <p className="text-lg mt-4 max-w-2xl mx-auto">
             Empowering champions through sportsmanship, dedication, and
             excellence.
           </p>
         </div>
-        <div className="pt-10">
-          {/* Accordion Section */}
-          <div className="w-full max-w-3xl mx-auto">
-            <Accordion type="single" collapsible>
-              {sportsData.map((sport, index) => (
-                <AccordionItem
-                  key={index}
-                  value={`item-${index}`}
-                  className="border-b border-gray-300"
+      </div>
+      <div className="pt-10">
+        {/* Accordion Section */}
+        <div className="w-full max-w-3xl mx-auto">
+          <Accordion type="single" collapsible>
+            {sportsData.map((sport, index) => (
+              <AccordionItem
+                key={index}
+                value={`item-${index}`}
+                className="border-b border-gray-300"
+              >
+                <button
+                  onClick={() => toggleAccordion(index)}
+                  className="flex items-center justify-between w-full px-4 py-3 text-lg font-semibold text-green-800 hover:bg-green-100 transition"
                 >
-                  <button
-                    onClick={() => toggleAccordion(index)}
-                    className="flex items-center justify-between w-full px-4 py-3 text-lg font-semibold text-green-800 hover:bg-green-100 transition"
-                  >
-                    <div className="flex items-center gap-3">
-                      <span className="text-2xl">{sport.icon}</span>
-                      {sport.name}
-                    </div>
-                    <span>{activeIndex === index ? "▲" : "▼"}</span>
-                  </button>
-                  {activeIndex === index && (
-                    <div className="px-4 py-2 text-gray-700 bg-gray-50">
-                      {sport.description}
-                    </div>
-                  )}
-                </AccordionItem>
-              ))}
-            </Accordion>
-          </div>
+                  <div className="flex items-center gap-3">
+                    <span className="text-2xl">{sport.icon}</span>
+                    {sport.name}
+                  </div>
+                  <span>{activeIndex === index ? "▲" : "▼"}</span>
+                </button>
+                {activeIndex === index && (
+                  <div className="px-4 py-2 text-gray-700 bg-gray-50">
+                    {sport.description}
+                  </div>
+                )}
+              </AccordionItem>
+            ))}
+          </Accordion>
         </div>
       </div>
     </>

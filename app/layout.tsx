@@ -7,7 +7,13 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
+import {
+  FaFacebook,
+  FaTwitter,
+  FaInstagram,
+  FaBars,
+  FaTimes,
+} from "react-icons/fa";
 
 export default function RootLayout({
   children,
@@ -16,6 +22,13 @@ export default function RootLayout({
 }) {
   const pathname = usePathname();
   const [isDark, setIsDark] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  // Close menu on route change
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [pathname]);
+
   useEffect(() => {
     AOS.init({ duration: 800, once: true });
   }, []);
@@ -27,40 +40,92 @@ export default function RootLayout({
     <html lang="en">
       <body className="bg-white text-green-800 dark:bg-gray-900 dark:text-white font-oswald transition-colors duration-300">
         {/* Navbar */}
-        <nav className="px-4 py-3 bg-white/90 dark:bg-gray-800/90 shadow-md flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <Image src="/logo.jpg" alt="Logo" width={32} height={32} className="rounded-full" />
+        <nav className="px-4 py-3 bg-white/90 dark:bg-gray-800/90 shadow-md flex items-center">
+          <div className="flex items-center gap-2 justify-start">
+            <Image
+              src="/logo.jpg"
+              alt="Logo"
+              width={50}
+              height={50}
+              className="rounded-full"
+            />
             <Link href="/" className="text-xl font-bold">
-              Iconic Turf
+              ICONIC TURF CLUB
             </Link>
           </div>
-          <ul className="flex space-x-6 text-md font-bold">
-            {["/", "/about", "/sports", "/gallery", "/contactus"].map(
-              (path, i) => (
-                <li key={i}>
-                  <Link
-                    href={path}
-                    className={
-                      pathname === path ? "text-blue-400 font-extrabold" : ""
-                    }
-                  >
-                    {path === "/" ? "HOME" : path.slice(1).toUpperCase()}
-                  </Link>
-                </li>
-              )
+          {/* Desktop Menu - Hidden on Mobile */}
+          <div className="ml-auto flex items-center gap-4">
+            {!menuOpen && (
+              <ul className="hidden md:flex space-x-6 text-md font-bold justify-end">
+                {["/", "/about", "/sports", "/gallery", "/contactus"].map(
+                  (path, i) => (
+                    <li key={i}>
+                      <Link
+                        href={path}
+                        className={
+                          pathname === path
+                            ? "text-emerald-700 font-extrabold"
+                            : "hover:text-emerald-600"
+                        }
+                      >
+                        {path === "/"
+                          ? "HOME"
+                          : path.slice(1).toUpperCase() === "CONTACTUS"
+                          ? "CONTACT"
+                          : path.slice(1).toUpperCase()}
+                      </Link>
+                    </li>
+                  )
+                )}
+              </ul>
             )}
-          </ul>
-          <button
-            onClick={() => setIsDark(!isDark)}
-            className="p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-black dark:text-white"
-          >
-            {isDark ? "☀️" : "🌙"}
-          </button>
+            <div className="flex items-center gap-4">
+              {/* Dark Mode */}
+              <button
+                onClick={() => setIsDark(!isDark)}
+                className="p-2 rounded-full bg-emerald-200 hover:bg-emerald-300 dark:bg-white dark:hover:bg-gray-300 text-black dark:text-black transition"
+                title="Toggle Dark Mode"
+              >
+                {isDark ? "☀️" : "🌙"}
+              </button>
+              {/* Hamburger */}
+              <button
+                className="md:hidden text-2xl text-gray-800 dark:text-white"
+                onClick={() => setMenuOpen(!menuOpen)}
+                aria-label="Toggle Menu"
+              >
+                {menuOpen ? <FaTimes /> : <FaBars />}
+              </button>
+            </div>
+          </div>
+          {/* Mobile Menu */}
+          {menuOpen && (
+            <ul className="absolute top-16 left-0 w-full bg-white dark:bg-gray-800 shadow-lg flex flex-col items-start p-6 space-y-4 md:hidden z-50">
+              {["/", "/about", "/sports", "/gallery", "/contactus"].map(
+                (path, i) => (
+                  <li key={i}>
+                    <Link
+                      href={path}
+                      className={`text-lg block ${
+                        pathname === path
+                          ? "text-emerald-700 font-extrabold"
+                          : "hover:text-emerald-600"
+                      }`}
+                    >
+                      {path === "/"
+                        ? "HOME"
+                        : path.slice(1).toUpperCase() === "CONTACTUS"
+                        ? "CONTACT"
+                        : path.slice(1).toUpperCase()}
+                    </Link>
+                  </li>
+                )
+              )}
+            </ul>
+          )}
         </nav>
-
         {/* Main Content */}
         <main className="min-h-[calc(100vh-100px)]">{children}</main>
-
         {/* Footer */}
         <footer className="p-6 bg-accent dark:bg-gray-800 shadow-md">
           <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-6">
@@ -78,22 +143,25 @@ export default function RootLayout({
               <h2 className="text-lg font-semibold mb-3">Quick Links</h2>
               <ul className="space-y-1 text-sm text-gray-700 dark:text-gray-300">
                 <li>
-                  <Link href="/" className="hover:text-blue-400">
+                  <Link href="/" className="hover:text-green-800">
                     Home
                   </Link>
                 </li>
                 <li>
-                  <Link href="/about" className="hover:text-blue-400">
+                  <Link href="/about" className="hover:text-green-800">
                     About Us
                   </Link>
                 </li>
                 <li>
-                  <Link href="/gallery" className="hover:text-blue-400">
+                  <Link href="/gallery" className="hover:text-green-800">
                     Gallery
                   </Link>
                 </li>
                 <li>
-                  <Link href="mailto:name@email.com" className="hover:text-blue-400">
+                  <Link
+                    href="mailto:name@email.com"
+                    className="hover:text-green-800"
+                  >
                     Contact
                   </Link>
                 </li>
@@ -107,13 +175,13 @@ export default function RootLayout({
                 📧{" "}
                 <Link
                   href="mailto:info@iconicturf.com"
-                  className="hover:text-blue-400"
+                  className="hover:text-green-800"
                 >
                   info@iconicturf.com
                 </Link>
                 <br />
                 📞{" "}
-                <Link href="tel:+1234567890" className="hover:text-blue-400">
+                <Link href="tel:+1234567890" className="hover:text-green-800">
                   +1 234 567 890
                 </Link>
               </p>
