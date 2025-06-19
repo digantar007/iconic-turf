@@ -131,9 +131,9 @@ export default function RootLayout({
           <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-6">
             {/* About */}
             <div>
-              <h2 className="text-lg font-semibold mb-3">About Iconic Turf</h2>
+              <h2 className="text-lg font-semibold mb-3">About Iconic Turf Club</h2>
               <p className="text-sm text-gray-700 dark:text-gray-300">
-                Empowering your sports through sportsmanship and top-quality turf
+                Empowering your sports through sportsmanship and top-quality Sports
                 infrastructure.
               </p>
             </div>
@@ -200,7 +200,7 @@ export default function RootLayout({
           </div>
 
           <div className="text-center text-sm text-gray-600 dark:text-gray-400 mt-6 border-t pt-4">
-            &copy; {new Date().getFullYear()} Iconic Turf. All rights reserved.
+            &copy; {new Date().getFullYear()} Iconic Turf Club. All rights reserved.
           </div>
         </footer>
       </body>
