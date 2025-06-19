@@ -133,7 +133,7 @@ export default function RootLayout({
             <div>
               <h2 className="text-lg font-semibold mb-3">About Iconic Turf</h2>
               <p className="text-sm text-gray-700 dark:text-gray-300">
-                Empowering champions through sportsmanship and top-quality turf
+                Empowering your sports through sportsmanship and top-quality turf
                 infrastructure.
               </p>
             </div>
