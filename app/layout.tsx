@@ -43,15 +43,24 @@ export default function RootLayout({
         <nav className="px-4 py-3 bg-white/90 dark:bg-gray-800/90 shadow-md flex items-center">
           <div className="flex items-center gap-2 justify-start">
             <Image
-              src="/logo.jpg"
+              src="/logo.png"
               alt="Logo"
               width={50}
               height={50}
               className="rounded-full"
             />
-            <Link href="/" className="text-xl font-bold">
-              ICONIC TURF CLUB
-            </Link>
+            {/* Site Name + Tagline */}
+            <div className="flex flex-col leading-tight">
+              <Link
+                href="/"
+                className="text-xl font-bold text-green-800 dark:text-white"
+              >
+                ICONIC TURF CLUB
+              </Link>
+              <span className="text-sm text-gray-600 dark:text-gray-300">
+                Your Game, Our Ground
+              </span>
+            </div>
           </div>
           {/* Desktop Menu - Hidden on Mobile */}
           <div className="ml-auto flex items-center gap-4">
@@ -131,10 +140,12 @@ export default function RootLayout({
           <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-6">
             {/* About */}
             <div>
-              <h2 className="text-lg font-semibold mb-3">About Iconic Turf Club</h2>
+              <h2 className="text-lg font-semibold mb-3">
+                About Iconic Turf Club
+              </h2>
               <p className="text-sm text-gray-700 dark:text-gray-300">
-                Empowering your sports through sportsmanship and top-quality Sports
-                infrastructure.
+                Empowering your sports through sportsmanship and top-quality
+                sports infrastructure.
               </p>
             </div>
 
@@ -159,7 +170,7 @@ export default function RootLayout({
                 </li>
                 <li>
                   <Link
-                    href="mailto:name@email.com"
+                    href="mailto:iconicturfclub@gmail.com"
                     className="hover:text-green-800"
                   >
                     Contact
@@ -174,10 +185,10 @@ export default function RootLayout({
               <p className="text-sm text-gray-700 dark:text-gray-300 mb-2">
                 📧{" "}
                 <Link
-                  href="mailto:info@iconicturf.com"
+                  href="mailto:iconicturfclub@gmail.com"
                   className="hover:text-green-800"
                 >
-                  info@iconicturf.com
+                  iconicturfclub@gmail.com
                 </Link>
                 <br />
                 📞{" "}
@@ -192,7 +203,7 @@ export default function RootLayout({
                 <Link href="#">
                   <FaTwitter />
                 </Link>
-                <Link href="#">
+                <Link href="https://www.instagram.com/iconicturfclub?igsh=MXB0dDMzbWM4eXhyMA%3D%3D&utm_source=qr">
                   <FaInstagram />
                 </Link>
               </div>
@@ -200,7 +211,8 @@ export default function RootLayout({
           </div>
 
           <div className="text-center text-sm text-gray-600 dark:text-gray-400 mt-6 border-t pt-4">
-            &copy; {new Date().getFullYear()} Iconic Turf Club. All rights reserved.
+            &copy; {new Date().getFullYear()} Iconic Turf Club. All rights
+            reserved.
           </div>
         </footer>
       </body>

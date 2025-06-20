@@ -1,4 +1,6 @@
 "use client";
+import { useRef } from "react";
+import Autoplay from "embla-carousel-autoplay";
 import Link from "next/link";
 import CountUp from "react-countup";
 import Image from "next/image";
@@ -13,12 +15,30 @@ import {
 } from "@/components/ui/carousel";
 
 export default function Home() {
+  // 👇 Type assertion via `as any` to fix type mismatch
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const autoplayPlugin1 = useRef<any>(
+    Autoplay({ delay: 3000, stopOnInteraction: false, stopOnMouseEnter: false})
+  );
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const autoplayPlugin2 = useRef<any>(
+    Autoplay({ delay: 3000, stopOnInteraction: false, stopOnMouseEnter: false})
+  );
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const autoplayPlugin3 = useRef<any>(
+    Autoplay({ delay: 3000, stopOnInteraction: false, stopOnMouseEnter: false})
+  );
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const autoplayPlugin4 = useRef<any>(
+    Autoplay({ delay: 3000, stopOnInteraction: false, stopOnMouseEnter: false})
+  );
+
   return (
     <>
       {/* Hero Section */}
       <div className="relative h-96 flex items-center justify-center text-center text-white bg-white">
         <Image
-          src="/bg.jpg"
+          src="/bg.jpeg"
           alt="Hero Background"
           fill
           loading="eager"
@@ -27,13 +47,12 @@ export default function Home() {
         />
         <div className="absolute inset-0 bg-black bg-opacity-10 z-10"></div>
 
-        <div className="relative z-20 px-4">
+        {/* <div className="relative z-20 px-4">
           <h1 className="text-6xl font-extrabold">Welcome to Iconic Turf</h1>
           <p className="text-lg mt-4 max-w-2xl mx-auto">
-            Empowering sports through sportsmanship, dedication, and
-            excellence.
+            Empowering sports through sportsmanship, dedication, and excellence.
           </p>
-        </div>
+        </div> */}
       </div>
       {/* Who We Are & Metrics Section Combined */}
       <div
@@ -44,7 +63,9 @@ export default function Home() {
           Your Multi-Sports Destination
         </h4>
         <p className="text-lg max-w-3xl mx-auto mb-8">
-          A professional sports organization dedicated to building world-class sports infrastructure, mentoring community youth under certified coaches, and organizing premier sports and corporate events.
+          A professional sports organization dedicated to building world-class
+          sports infrastructure, mentoring community youth under certified
+          coaches, and organizing sports and corporate events.
         </p>
         {/* Metrics Section */}
         <div className="container mx-auto py-10 px-6 text-center">
@@ -76,83 +97,142 @@ export default function Home() {
         className="container mx-auto py-10 px-6 text-center"
         data-aos="fade-up"
       >
-        <h2 className="text-3xl font-bold">Our Expertise</h2>
+        <h2 className="text-3xl font-bold mb-8">Our Expertise</h2>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-          <Link
-            href="/building-sports-infra"
-            className="p-4 bg-accent rounded-lg shadow-md dark:bg-gray-800 dark:text-white cursor-pointer hover:scale-105 transition-colors"
-          >
-            <div className="relative w-full aspect-[4/3]">
-              <Image
-                src="/bg1.jpeg"
-                alt="Building Sports Infrastructure"
-                fill
-                className="rounded-md mb-4"
-                loading="lazy"
-              />
-            </div>
-            <h3 className="text-lg font-bold ">
-              Building Sports Infrastructure
-            </h3>
-            <p className="text-sm ">
-              Crafting world-class infrastructure for unmatched sports experiences.
-            </p>
-          </Link>
-          <Link
-            href="/expertise/coaching-students"
-            className="p-4 bg-accent rounded-lg shadow-md dark:bg-gray-800 dark:text-white cursor-pointer hover:scale-105 transition-colors"
-          >
-            <div className="relative w-full aspect-[4/3]">
-              <Image
-                src="/bg2.jpeg"
-                alt="Coaching"
-                fill
-                loading="lazy"
-                className="rounded-md mb-4"
-              />
-            </div>
-            <h3 className="text-lg font-bold ">Mentoring Community Kids</h3>
-            <p className="text-sm ">
-              Empowering athletes with expert guidance and mentorship.
-            </p>
-          </Link>
+          {/* Card 1 */}
+          <div className="p-4 bg-accent rounded-lg shadow-md dark:bg-gray-800 dark:text-white cursor-pointer hover:scale-105 transition-transform">
+            <Carousel
+              plugins={autoplayPlugin1.current ? [autoplayPlugin1.current] : []}
+              className="w-full"
+              onMouseEnter={() => autoplayPlugin1.current?.stop()}
+              onMouseLeave={() => autoplayPlugin1.current?.play()}
+            >
+              <CarouselContent>
+                {["/bg1.1.jpeg", "/bg1.2.jpeg", "/bg1.3.jpeg","/bg1.4.jpeg", "/bg1.5.jpeg", "/bg1.6.jpeg", "/bg1.7.jpeg"].map((img, index) => (
+                  <CarouselItem key={index} className="relative w-full aspect-[4/3]">
+                      <Image
+                        src={img}
+                        alt={`Slide ${index + 1}`}
+                        fill
+                        className="object-cover rounded-md"
+                        loading="lazy"
+                      />
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="left-2 top-1/2 transform -translate-y-1/2" />
+              <CarouselNext className="right-2 top-1/2 transform -translate-y-1/2" />
+            </Carousel>
+            <Link href="/building-sports-infra">
+              <h3 className="text-lg font-bold mb-1">
+                Build Sports Infrastructure
+              </h3>
+              <p className="text-sm">
+                Crafting world-class infrastructure for unmatched experiences.
+              </p>
+            </Link>
+          </div>
 
-          <Link
-            href="/expertise/building-community"
-            className="p-4 bg-accent rounded-lg shadow-md dark:bg-gray-800 dark:text-white cursor-pointer hover:scale-105 transition-colors"
-          >
-            <div className="relative w-full aspect-[4/3]">
-              <Image
-                src="/bg3.jpeg"
-                alt="Community"
-                fill
-                loading="lazy"
-                className="rounded-md mb-4"
-              />
-            </div>
-            <h3 className="text-lg font-bold "> Organize Sports & Corporate Events</h3>
-            <p className="text-sm ">
-              Creating a thriving sports culture through engagement.
-            </p>
-          </Link>
-          <Link
-            href="/expertise/building-community"
-            className="p-4 bg-accent rounded-lg shadow-md dark:bg-gray-800 dark:text-white cursor-pointer hover:scale-105 transition-colors"
-          >
-            <div className="relative w-full aspect-[4/3]">
-              <Image
-                src="/bg4.jpeg"
-                alt="Community"
-                fill
-                loading="lazy"
-                className="rounded-md mb-4"
-              />
-            </div>
-            <h3 className="text-lg font-bold "> Leisure Play</h3>
-            <p className="text-sm ">
-              Book a slot for a relaxed, recreational game with friends or family. 
-            </p>
-          </Link>
+          {/* Card 2 */}
+          <div className="p-4 bg-accent rounded-lg shadow-md dark:bg-gray-800 dark:text-white cursor-pointer hover:scale-105 transition-transform">
+            <Carousel
+              plugins={autoplayPlugin2.current ? [autoplayPlugin2.current] : []}
+              className="w-full"
+              onMouseEnter={() => autoplayPlugin2.current?.stop()}
+              onMouseLeave={() => autoplayPlugin2.current?.play()}
+            >
+              <CarouselContent>
+                {["/bg2.1.jpeg", "/bg2.2.jpeg", "/bg2.3.jpeg","/bg2.4.jpeg"].map((img, index) => (
+                  <CarouselItem key={index} className="relative w-full aspect-[4/3]">
+                      <Image
+                        src={img}
+                        alt={`Slide ${index + 1}`}
+                        fill
+                        className="object-cover rounded-md"
+                        loading="lazy"
+                      />
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="left-2 top-1/2 transform -translate-y-1/2" />
+              <CarouselNext className="right-2 top-1/2 transform -translate-y-1/2" />
+            </Carousel>
+            <Link href="/building-sports-infra">
+              <h3 className="text-lg font-bold mb-1">
+                Mentor Community Kids
+              </h3>
+              <p className="text-sm">
+                Empowering kids with expert guidance and mentorship.
+              </p>
+            </Link>
+          </div>
+          {/* Card 3 */}
+          <div className="p-4 bg-accent rounded-lg shadow-md dark:bg-gray-800 dark:text-white cursor-pointer hover:scale-105 transition-transform">
+            <Carousel
+              plugins={autoplayPlugin3.current ? [autoplayPlugin3.current] : []}
+              className="w-full"
+              onMouseEnter={() => autoplayPlugin3.current?.stop()}
+              onMouseLeave={() => autoplayPlugin3.current?.play()}
+            >
+              <CarouselContent>
+                {["/bg3.1.jpeg", "/bg3.2.jpeg", "/bg3.3.jpeg","/bg3.4.jpeg", "/bg3.5.jpeg", "/bg3.6.jpeg", "/bg3.7.jpeg"].map((img, index) => (
+                  <CarouselItem key={index} className="relative w-full aspect-[4/3]">
+                      <Image
+                        src={img}
+                        alt={`Slide ${index + 1}`}
+                        fill
+                        className="object-cover rounded-md"
+                        loading="lazy"
+                      />
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="left-2 top-1/2 transform -translate-y-1/2" />
+              <CarouselNext className="right-2 top-1/2 transform -translate-y-1/2" />
+            </Carousel>
+            <Link href="/building-sports-infra">
+              <h3 className="text-lg font-bold mb-1">
+                Organize Sports & Corporate Events
+              </h3>
+              <p className="text-sm">
+                Creating a thriving sports culture through engagement.
+              </p>
+            </Link>
+          </div>
+          {/* Card 4 */}
+          <div className="p-4 bg-accent rounded-lg shadow-md dark:bg-gray-800 dark:text-white cursor-pointer hover:scale-105 transition-transform">
+            <Carousel
+              plugins={autoplayPlugin4.current ? [autoplayPlugin4.current] : []}
+              className="w-full"
+              onMouseEnter={() => autoplayPlugin4.current?.stop()}
+              onMouseLeave={() => autoplayPlugin4.current?.play()}
+            >
+              <CarouselContent>
+                {["/bg4.1.jpeg", "/bg4.2.jpeg", "/bg4.3.jpeg"].map((img, index) => (
+                  <CarouselItem key={index} className="relative w-full aspect-[4/3]">
+                      <Image
+                        src={img}
+                        alt={`Slide ${index + 1}`}
+                        fill
+                        className="object-cover rounded-md"
+                        loading="lazy"
+                      />
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="left-2 top-1/2 transform -translate-y-1/2" />
+              <CarouselNext className="right-2 top-1/2 transform -translate-y-1/2" />
+            </Carousel>
+            <Link href="/building-sports-infra">
+              <h3 className="text-lg font-bold mb-1">
+                Leisure Play
+              </h3>
+              <p className="text-sm">
+                Book a slot for a relaxed game with friends, family, or
+              colleagues.
+              </p>
+            </Link>
+          </div>
         </div>
       </div>
       {/* Customer Segments */}

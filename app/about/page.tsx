@@ -17,27 +17,18 @@ export default function AboutUs() {
       {/* Hero Section */}
       <div className="relative h-96 flex items-center justify-center text-center text-white bg-white">
         <Image
-          src="/bg.jpg"
+          src="/bg.jpeg"
           alt="Hero Background"
           fill
           loading="eager"
           priority
           className="object-cover z-0"
         />
-        <div className="absolute inset-0 bg-black bg-opacity-10 z-10"></div>
-
-        <div className="relative z-20 px-4">
-          <h1 className="text-6xl font-extrabold">About</h1>
-          <p className="text-lg mt-4 max-w-2xl mx-auto">
-            Delivering complete sports solutions — from building premium
-            infrastructure to nurturing future champions.
-          </p>
-        </div>
       </div>
       {/* Key Points Section */}
       <div className="container mx-auto py-12 px-4 text-center">
         <h2 className="text-3xl font-bold text-green-700 mb-10">
-          Why Choose Iconic Turf?
+          Why Us?
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-left">
@@ -65,7 +56,7 @@ export default function AboutUs() {
             },
             {
               icon: <FaLightbulb />,
-              label: "Night play enabled with high-power floodlights",
+              label: "Night play enabled with high-power floodlights for Leisure Play",
             },
             {
               icon: <FaShower />,

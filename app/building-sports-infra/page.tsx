@@ -13,22 +13,13 @@ export default function BuildingTurfAPS() {
       {/* Hero Section */}
       <div className="relative h-96 flex items-center justify-center text-center text-white bg-white">
         <Image
-          src="/bg.jpg"
+          src="/bg.jpeg"
           alt="Hero Background"
           fill
           loading="eager"
           priority
           className="object-cover z-0"
         />
-        <div className="absolute inset-0 bg-black bg-opacity-10 z-10"></div>
-
-        <div className="relative z-20 px-4">
-          <h1 className="text-6xl font-extrabold"> Building Sports Infrastructure</h1>
-          <p className="text-lg mt-4 max-w-2xl mx-auto">
-            We specialize in designing and executing high-quality sports infrastructure
-            with **Turnkey and Modular solutions**.
-          </p>
-        </div>
       </div>
 
       <div className="max-w-3xl mx-auto pt-10">
