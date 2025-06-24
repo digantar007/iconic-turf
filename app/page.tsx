@@ -45,14 +45,6 @@ export default function Home() {
           priority
           className="object-cover z-0"
         />
-        <div className="absolute inset-0 bg-black bg-opacity-10 z-10"></div>
-
-        {/* <div className="relative z-20 px-4">
-          <h1 className="text-6xl font-extrabold">Welcome to Iconic Turf</h1>
-          <p className="text-lg mt-4 max-w-2xl mx-auto">
-            Empowering sports through sportsmanship, dedication, and excellence.
-          </p>
-        </div> */}
       </div>
       {/* Who We Are & Metrics Section Combined */}
       <div
@@ -142,7 +134,7 @@ export default function Home() {
               onMouseLeave={() => autoplayPlugin2.current?.play()}
             >
               <CarouselContent>
-                {["/bg2.1.jpeg", "/bg2.2.jpeg", "/bg2.3.jpeg","/bg2.4.jpeg"].map((img, index) => (
+                {["/bg2.1.jpeg", "/bg2.2.jpeg", "/bg2.3.jpeg","/bg2.4.jpeg","/bg2.5.jpeg"].map((img, index) => (
                   <CarouselItem key={index} className="relative w-full aspect-[4/3]">
                       <Image
                         src={img}
@@ -157,7 +149,7 @@ export default function Home() {
               <CarouselPrevious className="left-2 top-1/2 transform -translate-y-1/2" />
               <CarouselNext className="right-2 top-1/2 transform -translate-y-1/2" />
             </Carousel>
-            <Link href="/building-sports-infra">
+            <Link href="#">
               <h3 className="text-lg font-bold mb-1">
                 Mentor Community Kids
               </h3>
@@ -190,7 +182,7 @@ export default function Home() {
               <CarouselPrevious className="left-2 top-1/2 transform -translate-y-1/2" />
               <CarouselNext className="right-2 top-1/2 transform -translate-y-1/2" />
             </Carousel>
-            <Link href="/building-sports-infra">
+            <Link href="#">
               <h3 className="text-lg font-bold mb-1">
                 Organize Sports & Corporate Events
               </h3>
@@ -223,7 +215,7 @@ export default function Home() {
               <CarouselPrevious className="left-2 top-1/2 transform -translate-y-1/2" />
               <CarouselNext className="right-2 top-1/2 transform -translate-y-1/2" />
             </Carousel>
-            <Link href="/building-sports-infra">
+            <Link href="#">
               <h3 className="text-lg font-bold mb-1">
                 Leisure Play
               </h3>

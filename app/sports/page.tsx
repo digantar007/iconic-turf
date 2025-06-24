@@ -1,68 +1,43 @@
 "use client";
-import { Accordion, AccordionItem } from "@/components/ui/accordion";
-import Image from "next/image";
-import { useState } from "react";
 import {
-  FaFutbol,
-  FaHockeyPuck,
-  FaTableTennis,
-  FaBasketballBall,
-  FaVolleyballBall,
-} from "react-icons/fa";
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+} from "@/components/ui/accordion";
+import Image from "next/image";
+import { FaFutbol, FaHockeyPuck } from "react-icons/fa";
+import { GiCricketBat } from "react-icons/gi";
 
 const sportsData = [
   {
     name: "Cricket",
-    icon: <FaHockeyPuck />,
-    description: "Cricket is a bat-and-ball game played between two teams.",
+    icon: <GiCricketBat />,
+    description:
+      "Cricket is a bat-and-ball game played between two teams of eleven players. It's highly popular in India, England, Australia, and other parts of the world.",
+    id: "cricket",
   },
   {
     name: "Football",
     icon: <FaFutbol />,
     description:
-      "Football is a team sport played with a spherical ball between two teams of 11 players.",
+      "Football is a team sport played with a spherical ball between two teams of 11 players. It's the world’s most popular sport.",
+    id: "football",
   },
   {
     name: "Hockey",
     icon: <FaHockeyPuck />,
     description:
-      "Hockey is a fast-paced game played on ice or field with sticks and a puck or ball.",
-  },
-  {
-    name: "Badminton",
-    icon: <FaTableTennis />,
-    description:
-      "Badminton is a racquet sport played using a shuttlecock across a net.",
-  },
-  {
-    name: "Tennis",
-    icon: <FaTableTennis />,
-    description:
-      "Tennis is a sport where players use rackets to hit a ball over a net on a rectangular court.",
-  },
-  {
-    name: "Basketball",
-    icon: <FaBasketballBall />,
-    description:
-      "Basketball is played between two teams of five players each on a rectangular court.",
-  },
-  {
-    name: "Volleyball",
-    icon: <FaVolleyballBall />,
-    description:
-      "Volleyball is a sport where two teams try to score points by hitting a ball over a net.",
+      "Hockey is a fast-paced game played on ice or field with sticks and a puck or ball. It requires speed, strategy, and precision.",
+    id: "hockey",
   },
 ];
-export default function SportsPage() {
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
-  const toggleAccordion = (index: number) => {
-    setActiveIndex(activeIndex === index ? null : index);
-  };
+export default function SportsPage() {
   return (
     <>
       {/* Hero Section */}
-      <div className="relative h-96 flex items-center justify-center text-center text-white bg-white">
+      <div className="relative h-96 flex items-center justify-center text-white">
         <Image
           src="/bg.jpeg"
           alt="Hero Background"
@@ -72,31 +47,32 @@ export default function SportsPage() {
           className="object-cover z-0"
         />
       </div>
-      <div className="pt-10">
-        {/* Accordion Section */}
+
+      {/* Accordion Section */}
+      <div className="pt-12 px-4 pb-20">
         <div className="w-full max-w-3xl mx-auto">
-          <Accordion type="single" collapsible>
-            {sportsData.map((sport, index) => (
+          <Accordion
+            type="multiple"
+            defaultValue={["cricket"]}
+            className="space-y-3"
+          >
+            {sportsData.map((sport) => (
               <AccordionItem
-                key={index}
-                value={`item-${index}`}
-                className="border-b border-gray-300"
+                key={sport.id}
+                value={sport.id}
+                className="rounded-xl border border-gray-200 dark:border-gray-700 shadow-md"
               >
-                <button
-                  onClick={() => toggleAccordion(index)}
-                  className="flex items-center justify-between w-full px-4 py-3 text-lg font-semibold text-green-800 hover:bg-green-100 transition"
-                >
-                  <div className="flex items-center gap-3">
+                <AccordionTrigger className="flex items-center justify-between gap-4 px-6 py-4 text-left text-green-900 dark:text-white font-semibold bg-green-50 dark:bg-gray-800 hover:bg-green-100 dark:hover:bg-gray-700 rounded-t-xl transition-all">
+                  <div className="flex items-center gap-3 text-lg">
                     <span className="text-2xl">{sport.icon}</span>
                     {sport.name}
                   </div>
-                  <span>{activeIndex === index ? "▲" : "▼"}</span>
-                </button>
-                {activeIndex === index && (
-                  <div className="px-4 py-2 text-gray-700 bg-gray-50">
-                    {sport.description}
-                  </div>
-                )}
+                </AccordionTrigger>
+                <AccordionContent
+                  className="px-6 py-4 text-gray-700 dark:text-gray-200 bg-white dark:bg-gray-900 rounded-b-xl border-t border-gray-200 dark:border-gray-700 transition-all duration-300 ease-in-out data-[state=open]:animate-slideDown data-[state=closed]:animate-slideUp"
+                >
+                  {sport.description}
+                </AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>

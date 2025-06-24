@@ -70,7 +70,7 @@ export default function RootLayout({
                   (path, i) => (
                     <li key={i}>
                       <Link
-                        href={path}
+                        href={path==="/contactus"?"mailto:iconicturfclub@gmail.com":path}
                         className={
                           pathname === path
                             ? "text-emerald-700 font-extrabold"
@@ -191,11 +191,34 @@ export default function RootLayout({
                   iconicturfclub@gmail.com
                 </Link>
                 <br />
-                📞{" "}
-                <Link href="tel:+1234567890" className="hover:text-green-800">
-                  +1 234 567 890
-                </Link>
-              </p>
+                <span className="space-x-2 mt-3">
+                  <a
+                    href="tel:+918908352996"
+                    className="inline-blocktext-sm font-semibold hover:bg-green-300 transition"
+                  >
+                    📱 +91 89083 52996
+                  </a>
+                  <a
+                    href="tel:+919437579020"
+                    className="inline-block text-sm font-semibold hover:bg-green-300 transition"
+                  >
+                    📱 +91 94375 79020
+                  </a>
+                </span>
+                </p>
+                <br />
+                <div className="">
+                  <a
+                    href="https://maps.app.goo.gl/w16yccMgHG2bZQWd6"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:underline text-sm"
+                  >
+                    📍 ICONIC TURF CLUB, Sector 9, Rourkela, Odisha, India – View on Google
+                    Maps
+                  </a>
+                </div>
+              
               <div className="flex gap-4 text-2xl">
                 <Link href="#">
                   <FaFacebook />
@@ -209,7 +232,6 @@ export default function RootLayout({
               </div>
             </div>
           </div>
-
           <div className="text-center text-sm text-gray-600 dark:text-gray-400 mt-6 border-t pt-4">
             &copy; {new Date().getFullYear()} Iconic Turf Club. All rights
             reserved.
