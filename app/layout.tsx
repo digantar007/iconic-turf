@@ -3,6 +3,8 @@
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./globals.css";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import { Analytics } from "@vercel/analytics/next"
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
