@@ -141,7 +141,7 @@ export default function AboutUs() {
               transition={{ duration: 0.6, delay: index * 0.2 }}
               className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 hover:scale-105 transition-transform"
             >
-              <h3 className="text-4xl font-bold text-green-700">
+              <h3 className="text-4xl font-bold text-green-700 dark:text-white">
                 <CountUp end={metric.value} duration={2} />+
               </h3>
               <p className="text-lg mt-2 text-gray-700 dark:text-gray-200">
@@ -159,7 +159,7 @@ export default function AboutUs() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-3xl font-bold text-green-700 mb-10"
+          className="text-3xl font-bold text-green-700 mb-10 dark:text-white"
         >
           Why Choose Us?
         </motion.h2>
@@ -181,7 +181,7 @@ export default function AboutUs() {
                   className="object-cover"
                 />
               </div>
-              <div className="flex items-center gap-3 text-green-600 text-2xl">
+              <div className="flex items-center gap-3 text-green-600 dark:text-white text-2xl">
                 {point.icon}
                 <span className="text-base sm:text-lg text-gray-800 dark:text-gray-200">
                   {point.label}
@@ -200,7 +200,7 @@ export default function AboutUs() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-3xl font-bold text-center text-green-700 mb-14"
+            className="text-3xl font-bold text-center text-green-700 mb-14 dark:text-white"
           >
             Meet the Founders
           </motion.h2>
@@ -214,7 +214,7 @@ export default function AboutUs() {
                 transition={{ duration: 0.6, delay: i * 0.2 }}
                 className="flex flex-col items-center text-center bg-white dark:bg-gray-800 p-6 rounded-lg shadow hover:shadow-lg"
               >
-                <div className="relative w-32 h-32 mb-4 rounded-full overflow-hidden border-4 border-green-600 shadow-md">
+                <div className="relative w-32 h-32 mb-4 rounded-full overflow-hidden border-4 border-green-600 shadow-md dark:border-white">
                   <Image
                     src={founder.image}
                     alt={founder.name}
@@ -222,7 +222,7 @@ export default function AboutUs() {
                     className="object-cover"
                   />
                 </div>
-                <p className="text-xl font-semibold text-green-700 mb-2">
+                <p className="text-xl font-semibold text-green-700 mb-2 dark:text-gray-300">
                   {founder.name}
                 </p>
                 <p className="text-sm text-gray-700 dark:text-gray-300 max-w-sm">
@@ -249,7 +249,7 @@ export default function AboutUs() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-3xl font-bold text-green-700 mb-10"
+          className="text-3xl font-bold text-green-700 mb-10 dark:text-white "
         >
           What Our Customers Say
         </motion.h2>
