@@ -7,13 +7,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import {
-  FaFacebook,
-  FaTwitter,
-  FaInstagram,
-  FaBars,
-  FaTimes,
-} from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaBars, FaTimes } from "react-icons/fa";
 
 export default function RootLayout({
   children,
@@ -70,7 +64,11 @@ export default function RootLayout({
                   (path, i) => (
                     <li key={i}>
                       <Link
-                        href={path==="/contactus"?"mailto:iconicturfclub@gmail.com":path}
+                        href={
+                          path === "/contactus"
+                            ? "mailto:iconicturfclub@gmail.com"
+                            : path
+                        }
                         className={
                           pathname === path
                             ? "text-emerald-700 font-extrabold"
@@ -176,6 +174,16 @@ export default function RootLayout({
                     Contact
                   </Link>
                 </li>
+                <li>
+                  <Link
+                    href="https://search.google.com/local/writereview?placeid=ChIJx9BKCVcZIDoRe5vCI_xlejU"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className=""
+                  >
+                    Review us on Google ⭐ 
+                  </Link>
+                </li>
               </ul>
             </div>
 
@@ -186,7 +194,7 @@ export default function RootLayout({
                 📧{" "}
                 <Link
                   href="mailto:iconicturfclub@gmail.com"
-                  className="hover:text-green-800"
+                  className="hover:text-green-800 font-semibold"
                 >
                   iconicturfclub@gmail.com
                 </Link>
@@ -194,7 +202,7 @@ export default function RootLayout({
                 <span className="space-x-2 mt-3">
                   <a
                     href="tel:+918908352996"
-                    className="inline-blocktext-sm font-semibold hover:bg-green-300 transition"
+                    className="inline-block text-sm font-semibold hover:bg-green-300 transition"
                   >
                     📱 +91 89083 52996
                   </a>
@@ -205,27 +213,27 @@ export default function RootLayout({
                     📱 +91 94375 79020
                   </a>
                 </span>
-                </p>
-                <br />
-                <div className="">
-                  <a
-                    href="https://maps.app.goo.gl/w16yccMgHG2bZQWd6"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:underline text-sm"
-                  >
-                    📍 ICONIC TURF CLUB, Sector 9, Rourkela, Odisha, India – View on Google
-                    Maps
-                  </a>
-                </div>
-              
+              </p>
+              <br />
+              <div className="">
+                <a
+                  href="https://maps.app.goo.gl/w16yccMgHG2bZQWd6"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline text-sm"
+                >
+                  📍 ICONIC TURF CLUB, Sector 9, Rourkela, Odisha, India – View
+                  on Google Maps
+                </a>
+              </div>
+
               <div className="flex gap-4 text-2xl">
-                <Link href="#">
+                <Link href="https://www.facebook.com/share/1a2Um75MqR/?mibextid=wwXIfr">
                   <FaFacebook />
                 </Link>
-                <Link href="#">
+                {/* <Link href="#">
                   <FaTwitter />
-                </Link>
+                </Link> */}
                 <Link href="https://www.instagram.com/iconicturfclub?igsh=MXB0dDMzbWM4eXhyMA%3D%3D&utm_source=qr">
                   <FaInstagram />
                 </Link>
