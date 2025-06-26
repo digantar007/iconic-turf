@@ -1,35 +1,33 @@
 "use client";
-import {
-  Accordion,
-  AccordionItem,
-  AccordionTrigger,
-  AccordionContent,
-} from "@/components/ui/accordion";
-import Image from "next/image";
-import { FaFutbol, FaHockeyPuck } from "react-icons/fa";
-import { GiCricketBat } from "react-icons/gi";
 
-const sportsData = [
+import Image from "next/image";
+import { motion } from "framer-motion";
+import {
+  FaFutbol,
+  FaHockeyPuck,
+} from "react-icons/fa";
+
+const sports = [
   {
     name: "Cricket",
-    icon: <GiCricketBat />,
-    description:
-      "Cricket is a bat-and-ball game played between two teams of eleven players. It's highly popular in India, England, Australia, and other parts of the world.",
-    id: "cricket",
+    icon: <FaFutbol />, // Replace with correct cricket icon if needed
+    stats: { players: 120, coaches: 4 },
+    image: "/E4.jpeg",
+    description: "Experience world-class cricket training on professional-grade turf with expert coaches."
   },
   {
     name: "Football",
     icon: <FaFutbol />,
-    description:
-      "Football is a team sport played with a spherical ball between two teams of 11 players. It's the world’s most popular sport.",
-    id: "football",
+    stats: { players: 95, coaches: 3 },
+    image: "/bg2.1.jpeg",
+    description: "Join our thriving football program to master skills, teamwork, and fitness."
   },
   {
     name: "Hockey",
     icon: <FaHockeyPuck />,
-    description:
-      "Hockey is a fast-paced game played on ice or field with sticks and a puck or ball. It requires speed, strategy, and precision.",
-    id: "hockey",
+    stats: { players: 40, coaches: 2 },
+    image: "/bg3.4.jpeg",
+    description: "Train on high-quality turf and learn from the best in our hockey initiative."
   },
 ];
 
@@ -37,10 +35,10 @@ export default function SportsPage() {
   return (
     <>
       {/* Hero Section */}
-      <div className="relative h-96 flex items-center justify-center text-white">
+      <div className="relative h-[60vh] sm:h-96 flex items-center justify-center text-center text-white">
         <Image
           src="/bg.jpeg"
-          alt="Hero Background"
+          alt="Sports Hero Background"
           fill
           loading="eager"
           priority
@@ -48,34 +46,38 @@ export default function SportsPage() {
         />
       </div>
 
-      {/* Accordion Section */}
-      <div className="pt-12 px-4 pb-20">
-        <div className="w-full max-w-3xl mx-auto">
-          <Accordion
-            type="multiple"
-            defaultValue={["cricket"]}
-            className="space-y-3"
-          >
-            {sportsData.map((sport) => (
-              <AccordionItem
-                key={sport.id}
-                value={sport.id}
-                className="rounded-xl border border-gray-200 dark:border-gray-700 shadow-md"
+      {/* Horizontal Scrollable Sports Cards */}
+      <div className="py-12 px-4 bg-gray-50 dark:bg-gray-900">
+        <h2 className="text-2xl font-bold text-center text-green-700 mb-8">
+          Featured Sports
+        </h2>
+        <div className="overflow-x-auto pb-4">
+          <div className="flex space-x-6 min-w-max px-2">
+            {sports.map((sport, index) => (
+              <motion.div
+                key={sport.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="w-72 sm:w-80 bg-white dark:bg-gray-800 rounded-xl shadow-lg p-4 flex-shrink-0 hover:scale-105 transition-transform duration-300"
               >
-                <AccordionTrigger className="flex items-center justify-between gap-4 px-6 py-4 text-left text-green-900 dark:text-white font-semibold bg-green-50 dark:bg-gray-800 hover:bg-green-100 dark:hover:bg-gray-700 rounded-t-xl transition-all">
-                  <div className="flex items-center gap-3 text-lg">
-                    <span className="text-2xl">{sport.icon}</span>
-                    {sport.name}
-                  </div>
-                </AccordionTrigger>
-                <AccordionContent
-                  className="px-6 py-4 text-gray-700 dark:text-gray-200 bg-white dark:bg-gray-900 rounded-b-xl border-t border-gray-200 dark:border-gray-700 transition-all duration-300 ease-in-out data-[state=open]:animate-slideDown data-[state=closed]:animate-slideUp"
-                >
+                <div className="relative w-full h-40 rounded-md overflow-hidden mb-3">
+                  <Image src={sport.image} alt={sport.name} fill className="object-cover" />
+                </div>
+                <div className="flex items-center gap-2 text-green-600 text-xl mb-2">
+                  {sport.icon}
+                  <h3 className="font-bold text-lg">{sport.name}</h3>
+                </div>
+                <div className="text-sm text-gray-600 dark:text-gray-300 mb-2">
+                  {sport.stats.players}+ Players · {sport.stats.coaches} Coaches
+                </div>
+                <p className="text-gray-700 dark:text-gray-200 text-sm">
                   {sport.description}
-                </AccordionContent>
-              </AccordionItem>
+                </p>
+              </motion.div>
             ))}
-          </Accordion>
+          </div>
         </div>
       </div>
     </>
