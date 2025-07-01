@@ -68,7 +68,7 @@ export default function RootLayout({
                       <Link
                         href={
                           path === "/contactus"
-                            ? "mailto:iconicturfclub@gmail.com"
+                            ? "/contact"
                             : path
                         }
                         className={
@@ -201,13 +201,13 @@ export default function RootLayout({
                   iconicturfclub@gmail.com
                 </Link>
                 <br />
-                <span className="space-x-2 mt-3">
+                <span className="mt-3">
                   <a
                     href="tel:+918908352996"
                     className="inline-block text-sm font-semibold hover:bg-green-300 transition"
                   >
                     📱 +91 89083 52996
-                  </a>
+                  </a><br/>
                   <a
                     href="tel:+919437579020"
                     className="inline-block text-sm font-semibold hover:bg-green-300 transition"
@@ -216,7 +216,6 @@ export default function RootLayout({
                   </a>
                 </span>
               </p>
-              <br />
               <div className="">
                 <a
                   href="https://maps.app.goo.gl/w16yccMgHG2bZQWd6"
