@@ -47,7 +47,7 @@ export default function ContactPage() {
 
   return (
     <div className="max-w-3xl mx-auto p-6 py-16">
-      <h1 className="text-3xl font-bold text-green-700 mb-6 text-center">
+      <h1 className="text-3xl font-bold text-green-700 mb-6 text-center dark:text-white">
         Contact Us
       </h1>
 
@@ -102,7 +102,7 @@ export default function ContactPage() {
 
         <button
           type="submit"
-          className="bg-green-700 text-white px-6 py-2 rounded hover:bg-green-800 transition"
+          className="bg-green-700 dark:bg-gray-800 text-white px-6 py-2 rounded hover:bg-gray-700 transition"
           disabled={isSubmitting}
         >
           {isSubmitting ? 'Sending...' : 'Submit'}

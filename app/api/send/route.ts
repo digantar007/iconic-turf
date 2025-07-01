@@ -11,8 +11,8 @@ export async function POST(req: Request) {
     const { name, email, contact , occupation, location, state, requirement } = body;
 
     const data = await resend.emails.send({
-      from: "onboarding@resend.dev", // ❗ only works for testing
-      to: "digantar.singh4@gmail.com", // ✅ your destination
+      from: process.env.EMAIL_FROM!,
+      to: process.env.EMAIL_TO!,
       subject: "New Contact Submission",
       html: `
         <h2>New Inquiry</h2>

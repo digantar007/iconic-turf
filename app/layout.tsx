@@ -170,7 +170,7 @@ export default function RootLayout({
                 </li>
                 <li>
                   <Link
-                    href="mailto:iconicturfclub@gmail.com"
+                    href="/contact"
                     className="hover:text-green-800"
                   >
                     Contact
@@ -191,7 +191,7 @@ export default function RootLayout({
 
             {/* Contact */}
             <div>
-              <h2 className="text-lg font-semibold mb-3">Contact Us</h2>
+              <h2 className="text-lg font-semibold mb-3">Reach out to US</h2>
               <p className="text-sm text-gray-700 dark:text-gray-300 mb-2">
                 📧{" "}
                 <Link
