@@ -102,7 +102,7 @@ export default function ContactPage() {
 
         <button
           type="submit"
-          className="bg-green-700 dark:bg-gray-800 text-white px-6 py-2 rounded hover:bg-gray-700 transition"
+          className="bg-green-700 dark:bg-gray-800 text-white px-6 py-2 rounded hover:bg-green-800 dark:hover:bg-gray-900 transition"
           disabled={isSubmitting}
         >
           {isSubmitting ? 'Sending...' : 'Submit'}
