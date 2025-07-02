@@ -51,7 +51,7 @@ const sports = [
     name: "Basketball",
     icon: <GiBasketballBall />,
     stats: { players: 40, coaches: 2 },
-    image: "/infra4.jpeg",
+    image: "/Basketball Court-Acrylic.jpg",
     description:
       "Shoot hoops, run drills, and build team dynamics on our well-maintained basketball court.",
   },
