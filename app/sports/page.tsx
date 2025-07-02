@@ -19,7 +19,7 @@ const sports = [
     name: "Cricket",
     icon: <GiCricketBat />,
     stats: { players: 120, coaches: 4 },
-    image: "/E4.jpeg",
+    image: "/bg3.8.jpeg",
     description:
       "Train on a full-length pitch with high-quality turf. Perfect your technique with experienced coaches.",
   },
@@ -83,7 +83,7 @@ const sports = [
     name: "Skating Rink",
     icon: <GiRollerSkate />,
     stats: { players: 40, coaches: 2 },
-    image: "/infra3.jpeg",
+    image: "/Skating Rink.jpeg",
     description:
       "Glide and groove in our smooth skating rink, perfect for beginners and advanced skaters alike.",
   },
