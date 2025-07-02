@@ -16,7 +16,7 @@ const galleryImages = [
   { src: "/bg3.1.jpeg", category: "football" },
   { src: "/bg3.4.jpeg", category: "hockey" },
   { src: "/bg3.5.jpeg", category: "football" },
-  { src: "/E2.jpeg", category: "cricket" }
+  { src: "/bg2.2.jpeg", category: "cricket" }
 ];
 
 export default function GalleryPage() {

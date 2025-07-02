@@ -61,7 +61,7 @@ export default function Home() {
     {
       name: "Kunal",
       image: "/founder1.jpg",
-      bio: "An Ultra runner, Half Iron Man & many more for whom fitness is his way of life. He has inspired an entire generation to believe that staying fit at any age is possible. Kunal brings a years of expertise in sports infrastructure development, project management, and youth outreach programs. His mission is to create accessible, high-quality sports spaces for all.",
+      bio: "An Ultra runner, Iron Man 70.3 & many more for whom fitness is his way of life. He has inspired an entire generation to believe that staying fit at any age is possible. Kunal brings a years of expertise in sports infrastructure development, project management, and youth outreach programs. His mission is to create accessible, high-quality sports spaces for all.",
     },
     {
       name: "Abhijeet",
@@ -136,7 +136,7 @@ export default function Home() {
               onMouseLeave={() => autoplayPlugin1.current?.play()}
             >
               <CarouselContent>
-                {["/bg1.1.jpeg", "/bg1.2.jpeg", "/bg1.3.jpeg","/bg1.4.jpeg", "/bg1.5.jpeg", "/bg1.6.jpeg", "/bg1.7.jpeg"].map((img, index) => (
+                {["/bg1.1.jpeg", "/bg1.2.jpeg", "/Basketball Court- Acrylic.png","/Pickleball Court-Acrylic-1.jpg", "/bg1.5.jpeg", "/Skating Rink.jpeg", "/bg1.7.jpeg"].map((img, index) => (
                   <CarouselItem key={index} className="relative w-full aspect-[4/3]">
                       <Image
                         src={img}

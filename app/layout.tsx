@@ -4,7 +4,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import "./globals.css";
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/next";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -62,26 +62,18 @@ export default function RootLayout({
           <div className="ml-auto flex items-center gap-4">
             {!menuOpen && (
               <ul className="hidden md:flex space-x-6 text-md font-bold justify-end">
-                {["/", "/about", "/sports", "/gallery", "/contactus"].map(
+                {["/", "/about", "/sports", "/gallery", "/contact"].map(
                   (path, i) => (
                     <li key={i}>
                       <Link
-                        href={
-                          path === "/contactus"
-                            ? "/contact"
-                            : path
-                        }
+                        href={path}
                         className={
                           pathname === path
                             ? "text-emerald-700 font-extrabold"
                             : "hover:text-emerald-600"
                         }
                       >
-                        {path === "/"
-                          ? "HOME"
-                          : path.slice(1).toUpperCase() === "CONTACTUS"
-                          ? "CONTACT"
-                          : path.slice(1).toUpperCase()}
+                        {path === "/" ? "HOME" : path.slice(1).toUpperCase()}
                       </Link>
                     </li>
                   )
@@ -110,7 +102,7 @@ export default function RootLayout({
           {/* Mobile Menu */}
           {menuOpen && (
             <ul className="absolute top-16 left-0 w-full bg-white dark:bg-gray-800 shadow-lg flex flex-col items-start p-6 space-y-4 md:hidden z-50">
-              {["/", "/about", "/sports", "/gallery", "/contactus"].map(
+              {["/", "/about", "/sports", "/gallery", "/contact"].map(
                 (path, i) => (
                   <li key={i}>
                     <Link
@@ -121,11 +113,7 @@ export default function RootLayout({
                           : "hover:text-emerald-600"
                       }`}
                     >
-                      {path === "/"
-                        ? "HOME"
-                        : path.slice(1).toUpperCase() === "CONTACTUS"
-                        ? "CONTACT"
-                        : path.slice(1).toUpperCase()}
+                      {path === "/" ? "HOME" : path.slice(1).toUpperCase()}
                     </Link>
                   </li>
                 )
@@ -169,10 +157,7 @@ export default function RootLayout({
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/contact"
-                    className="hover:text-green-800"
-                  >
+                  <Link href="/contact" className="hover:text-green-800">
                     Contact
                   </Link>
                 </li>
@@ -183,7 +168,7 @@ export default function RootLayout({
                     rel="noopener noreferrer"
                     className=""
                   >
-                    Review us on Google ⭐ 
+                    Review us on Google ⭐
                   </Link>
                 </li>
               </ul>
@@ -207,7 +192,8 @@ export default function RootLayout({
                     className="inline-block text-sm font-semibold hover:bg-green-300 transition"
                   >
                     📱 +91 89083 52996
-                  </a><br/>
+                  </a>
+                  <br />
                   <a
                     href="tel:+919437579020"
                     className="inline-block text-sm font-semibold hover:bg-green-300 transition"

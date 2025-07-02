@@ -59,7 +59,7 @@ const sports = [
     name: "Volleyball",
     icon: <GiVolleyballBall />,
     stats: { players: 40, coaches: 2 },
-    image: "/infra2.jpeg",
+    image: "/bg1.1.jpeg",
     description:
       "Serve, spike, and rally with friends or in tournaments on our cushioned volleyball turf.",
   },
@@ -67,7 +67,7 @@ const sports = [
     name: "Pickleball",
     icon: <GiPingPongBat />,
     stats: { players: 40, coaches: 2 },
-    image: "/bg1.4.jpeg",
+    image: "/Pickleball Court-Acrylic-1.jpg",
     description:
       "Enjoy one of the fastest-growing sports with our indoor and outdoor pickleball setups.",
   },

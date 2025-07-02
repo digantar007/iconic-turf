@@ -28,14 +28,14 @@ const infraSteps = [
     description:
       "We install professional-grade sub-base layers with integrated drainage systems to prevent waterlogging.",
     icon: <FaCogs className="text-green-600 text-3xl" />,
-    image: "/infra3.jpeg",
+    image: "/Pickleball Court-Acrylic-1.jpg",
   },
   {
     title: "Turf Installation",
     description:
       "Using top-quality synthetic turf, we lay and finish the surface for optimal performance and durability.",
     icon: <FaCheckCircle className="text-green-600 text-3xl" />,
-    image: "/infra4.jpeg",
+    image: "/Basketball Court- Acrylic.png",
   },
 ];
 
