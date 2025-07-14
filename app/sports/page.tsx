@@ -5,10 +5,8 @@ import { motion } from "framer-motion";
 import {
   GiCricketBat,
   GiSoccerBall,
-  GiHockey,
   GiTennisCourt,
   GiBasketballBall,
-  GiVolleyballBall,
   GiPingPongBat,
   GiRunningNinja,
   GiRollerSkate,
@@ -32,14 +30,6 @@ const sports = [
       "Dribble, pass, and score on our regulation-size football turf. Great for kids, pros, and weekend warriors.",
   },
   {
-    name: "Hockey",
-    icon: <GiHockey />,
-    stats: { players: 40, coaches: 2 },
-    image: "/bg3.4.jpeg",
-    description:
-      "Improve your stick-handling, speed, and strategy on our state-of-the-art hockey surface.",
-  },
-  {
     name: "Tennis",
     icon: <GiTennisCourt />,
     stats: { players: 40, coaches: 2 },
@@ -54,14 +44,6 @@ const sports = [
     image: "/Basketball Court-Acrylic.jpg",
     description:
       "Shoot hoops, run drills, and build team dynamics on our well-maintained basketball court.",
-  },
-  {
-    name: "Volleyball",
-    icon: <GiVolleyballBall />,
-    stats: { players: 40, coaches: 2 },
-    image: "/bg1.1.jpeg",
-    description:
-      "Serve, spike, and rally with friends or in tournaments on our cushioned volleyball turf.",
   },
   {
     name: "Pickleball",
