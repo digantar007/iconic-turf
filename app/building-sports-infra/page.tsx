@@ -115,7 +115,7 @@ export default function BuildInfraPage() {
       {/* Transformation Section */}
       <div className="bg-white dark:bg-gray-900 py-16 px-4">
         <h2 className="text-2xl sm:text-3xl font-bold text-center text-green-700 mb-8">
-          Transformation: From Raw Ground to Fully Functional Turf
+          Transformation
         </h2>
         <div className="relative max-w-5xl mx-auto flex flex-col sm:flex-row items-center gap-6">
           <div className="relative w-full sm:w-1/2 h-64 rounded-lg overflow-hidden">
@@ -141,7 +141,7 @@ export default function BuildInfraPage() {
       {/* Building Blocks Section (Row Style) */}
       <section className="container mx-auto py-16 px-6">
         <h2 className="text-3xl font-bold text-center text-green-700 mb-10">
-          Turf Construction Building Blocks
+          Development Stages
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {buildingBlocks.map((block, index) => (
@@ -250,9 +250,9 @@ export default function BuildInfraPage() {
 
       {/* CTA */}
       <div className="bg-green-700 text-white py-10 text-center">
-        <h3 className="text-2xl font-semibold">
+        <h2 className="text-2xl font-semibold">
           If you want it, we can help you create it.
-        </h3>
+        </h2>
         <p className="mt-2">
           Reach out to us for detailed consultation & site planning.
         </p>

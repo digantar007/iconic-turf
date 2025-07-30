@@ -185,7 +185,7 @@ export default function Home() {
               <CarouselPrevious className="left-2 top-1/2 transform -translate-y-1/2" />
               <CarouselNext className="right-2 top-1/2 transform -translate-y-1/2" />
             </Carousel>
-            <Link href="#">
+            <Link href="mentor-community-kids">
               <h3 className="text-lg font-bold mb-1">
                 Mentor Community Kids
               </h3>

@@ -54,7 +54,7 @@ export default function RootLayout({
                 ICONIC TURF CLUB
               </Link>
               <span className="text-sm text-gray-600 dark:text-gray-300">
-                Your Game, Our Ground
+                Shaping the Future of Sports
               </span>
             </div>
           </div>
@@ -62,22 +62,31 @@ export default function RootLayout({
           <div className="ml-auto flex items-center gap-4">
             {!menuOpen && (
               <ul className="hidden md:flex space-x-6 text-md font-bold justify-end">
-                {["/", "/about", "/sports", "/gallery", "/contact"].map(
-                  (path, i) => (
-                    <li key={i}>
-                      <Link
-                        href={path}
-                        className={
-                          pathname === path
-                            ? "text-emerald-700 font-extrabold"
-                            : "hover:text-emerald-600"
-                        }
-                      >
-                        {path === "/" ? "HOME" : path.slice(1).toUpperCase()}
-                      </Link>
-                    </li>
-                  )
-                )}
+                {[
+                  "/",
+                  "/about",
+                  "/building-sports-infra",
+                  "/sports",
+                  "/gallery",
+                  "/contact",
+                ].map((path, i) => (
+                  <li key={i}>
+                    <Link
+                      href={path}
+                      className={
+                        pathname === path
+                          ? "text-emerald-700 font-extrabold"
+                          : "hover:text-emerald-600"
+                      }
+                    >
+                      {path === "/"
+                        ? "HOME"
+                        : path === "/building-sports-infra"
+                          ? "BUILDING SPORTS INFRA"
+                          : path.slice(1).toUpperCase()}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             )}
             <div className="flex items-center gap-4">
