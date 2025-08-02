@@ -81,9 +81,9 @@ export default function RootLayout({
                     >
                       {path === "/"
                         ? "HOME"
-                        : path === "/building-sports-infra"
+                        : (path === "/building-sports-infra"
                           ? "INFRASTRUCTURE"
-                          : path.slice(1).toUpperCase()}
+                          : path.slice(1).toUpperCase())}
                     </Link>
                   </li>
                 ))}
@@ -111,22 +111,31 @@ export default function RootLayout({
           {/* Mobile Menu */}
           {menuOpen && (
             <ul className="absolute top-16 left-0 w-full bg-white dark:bg-gray-800 shadow-lg flex flex-col items-start p-6 space-y-4 md:hidden z-50">
-              {["/", "/about", "/sports", "/gallery", "/contact"].map(
-                (path, i) => (
-                  <li key={i}>
-                    <Link
-                      href={path}
-                      className={`text-lg block ${
-                        pathname === path
-                          ? "text-emerald-700 font-extrabold"
-                          : "hover:text-emerald-600"
-                      }`}
-                    >
-                      {path === "/" ? "HOME" : path.slice(1).toUpperCase()}
-                    </Link>
-                  </li>
-                )
-              )}
+              {[
+                "/",
+                "/about",
+                "/building-sports-infra",
+                "/sports",
+                "/gallery",
+                "/contact",
+              ].map((path, i) => (
+                <li key={i}>
+                  <Link
+                    href={path}
+                    className={`text-lg block ${
+                      pathname === path
+                        ? "text-emerald-700 font-extrabold"
+                        : "hover:text-emerald-600"
+                    }`}
+                  >
+                    {path === "/"
+                        ? "HOME"
+                        : (path === "/building-sports-infra"
+                          ? "INFRASTRUCTURE"
+                          : path.slice(1).toUpperCase())}
+                  </Link>
+                </li>
+              ))}
             </ul>
           )}
         </nav>
@@ -157,7 +166,20 @@ export default function RootLayout({
                 </li>
                 <li>
                   <Link href="/about" className="hover:text-green-800">
-                    About Us
+                    About
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/building-sports-infra"
+                    className="hover:text-green-800"
+                  >
+                    Infrastructure
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/sports" className="hover:text-green-800">
+                    Sports
                   </Link>
                 </li>
                 <li>
