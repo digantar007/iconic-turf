@@ -59,7 +59,7 @@ export default function ContactPage() {
           className="object-cover z-0"
         />
       </div>
-      <div className="max-w-3xl mx-auto p-6 py-16">
+      <div className="max-w-3xl mx-auto p-6 py-16 dark:text-black">
         <h1 className="text-3xl font-bold text-green-700 mb-6 text-center dark:text-white">
           Contact Us
         </h1>
@@ -74,7 +74,7 @@ export default function ContactPage() {
             ["State", "state"],
           ].map(([label, key]) => (
             <div key={key}>
-              <label className="font-semibold">{label}</label>
+              <label className="font-semibold dark:text-white">{label}</label>
               <input
                 type="text"
                 {...register(key as keyof FormData)}
@@ -89,7 +89,7 @@ export default function ContactPage() {
           ))}
 
           <div>
-            <label className="font-semibold">
+            <label className="font-semibold dark:text-white">
               Requirement(s) (please mention which Sports, area available along
               with other details)
             </label>

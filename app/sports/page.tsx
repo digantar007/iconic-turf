@@ -88,7 +88,7 @@ export default function SportsPage() {
 
       {/* Sports Grid Section */}
       <section className="py-16 px-4 sm:px-8">
-        <h2 className="text-3xl font-bold text-center text-green-700 mb-12">
+        <h2 className="text-3xl font-bold text-center text-green-700 mb-12 dark:text-white">
           Our Sports Offerings
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
@@ -110,12 +110,12 @@ export default function SportsPage() {
                 />
               </div>
               <div className="p-5">
-                <div className="flex items-center gap-2 text-green-700 dark:text-green-300 text-lg font-semibold mb-2">
+                <div className="flex items-center gap-2 text-green-700 dark:text-white text-lg font-semibold mb-2">
                   {sport.icon} {sport.name}
                 </div>
-                <p className="text-sm text-gray-700 dark:text-gray-300 mb-1">
+                {/* <p className="text-sm text-gray-700 dark:text-gray-300 mb-1">
                   {sport.stats.players}+ Players · {sport.stats.coaches} Coaches
-                </p>
+                </p> */}
                 <div className="text-sm text-gray-600 dark:text-gray-400 whitespace-pre-line">
                   {sport.description}
                 </div>

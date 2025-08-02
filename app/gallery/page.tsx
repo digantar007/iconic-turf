@@ -13,10 +13,20 @@ const sportsCategories = [
 
 const galleryImages = [
   { src: "/bg3.8.jpeg", category: "cricket" },
+  { src: "/bg3.9.jpeg", category: "cricket" },
   { src: "/bg3.1.jpeg", category: "football" },
+  { src: "/bg2.1.jpeg", category: "football" },
+  { src: "/bg3.7.jpeg", category: "football" },
+  { src: "/bg2.2.jpeg", category: "football" },
+  { src: "/bg2.5.jpeg", category: "football" },
   { src: "/bg3.4.jpeg", category: "hockey" },
-  { src: "/bg3.5.jpeg", category: "football" },
-  { src: "/bg2.2.jpeg", category: "cricket" }
+  { src: "/Hockey1.jpeg", category: "hockey" },
+  { src: "/Hockey2.jpeg", category: "hockey" },
+  { src: "/bg3.5.jpeg", category: "hockey" },
+  { src: "/bg4.2.jpeg", category: "cricket" },
+  { src: "/Gal1.jpeg", category: "" },
+  { src: "/Gal2.jpeg", category: "" },
+  { src: "/Gal3.jpeg", category: "" },
 ];
 
 export default function GalleryPage() {

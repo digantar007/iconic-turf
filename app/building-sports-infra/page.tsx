@@ -67,7 +67,7 @@ const buildingBlocks = [
 const servicesByITC = [
   {
     model: "DESIGN BUILD TRANSFER (DBT) MODEL",
-    icon: <FaCogs className="text-3xl text-green-600" />,
+    icon: <FaCogs className="text-3xl text-green-600 dark:text-white" />,
     points: [
       "Understanding client requirements - area available, type of sports, target audience, services offering, etc.",
       "Site visit",
@@ -80,7 +80,7 @@ const servicesByITC = [
   },
   {
     model: "DESIGN MODEL",
-    icon: <FaDraftingCompass className="text-3xl text-green-600" />,
+    icon: <FaDraftingCompass className="text-3xl text-green-600 dark:text-white" />,
     points: [
       "Understanding client requirements - area available, type of sports, target audience, services offering, etc.",
       "Site visit",
@@ -90,7 +90,7 @@ const servicesByITC = [
   },
   {
     model: "MODULAR MODEL",
-    icon: <FaCubes className="text-3xl text-green-600" />,
+    icon: <FaCubes className="text-3xl text-green-600 dark:text-white" />,
     points: [
       "Understanding client requirements - area available, type of sports, target audience, services offering, etc.",
       "Site visit",
@@ -114,7 +114,7 @@ export default function BuildInfraPage() {
 
       {/* Transformation Section */}
       <div className="bg-white dark:bg-gray-900 py-16 px-4">
-        <h2 className="text-2xl sm:text-3xl font-bold text-center text-green-700 mb-8">
+        <h2 className="text-2xl sm:text-3xl font-bold text-center text-green-700 dark:text-white mb-8">
           Transformation
         </h2>
         <div className="relative max-w-5xl mx-auto flex flex-col sm:flex-row items-center gap-6">
@@ -140,7 +140,7 @@ export default function BuildInfraPage() {
 
       {/* Building Blocks Section (Row Style) */}
       <section className="container mx-auto py-16 px-6">
-        <h2 className="text-3xl font-bold text-center text-green-700 mb-10">
+        <h2 className="text-3xl font-bold text-center text-green-700 mb-10 dark:text-white">
           Development Stages
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -162,7 +162,7 @@ export default function BuildInfraPage() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-bold text-green-700 dark:text-green-300 mb-2">
+                <h3 className="text-lg font-bold text-green-700 dark:text-white mb-2">
                   {block.title}
                 </h3>
                 <p className="text-sm text-gray-700 dark:text-gray-300">
@@ -176,7 +176,7 @@ export default function BuildInfraPage() {
 
       {/* Surface Options Section */}
       <section className="container mx-auto py-16 px-6">
-        <h2 className="text-3xl font-bold text-center text-green-700 mb-10">
+        <h2 className="text-3xl font-bold text-center text-green-700 mb-10 dark:text-white">
           Our Surface Building Blocks
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
@@ -198,7 +198,7 @@ export default function BuildInfraPage() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-3 text-green-700 dark:text-green-300">
+                <h3 className="text-xl font-bold mb-3 text-green-700 dark:text-white">
                   {item.title}
                 </h3>
                 <ul className="space-y-2 text-sm">
@@ -216,7 +216,7 @@ export default function BuildInfraPage() {
 
       {/* Services by ITC Section */}
       <section className="container mx-auto py-16 px-6">
-        <h2 className="text-3xl font-bold text-center text-green-700 mb-10">
+        <h2 className="text-3xl font-bold text-center text-green-700 mb-10 dark:text-white">
           Services by ITC
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -231,7 +231,7 @@ export default function BuildInfraPage() {
             >
               <div className="flex items-center gap-3 mb-4">
                 {service.icon}
-                <h3 className="text-xl font-bold text-green-700 dark:text-green-300">
+                <h3 className="text-xl font-bold text-green-700 dark:text-white">
                   {service.model}
                 </h3>
               </div>

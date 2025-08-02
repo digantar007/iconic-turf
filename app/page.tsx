@@ -65,7 +65,7 @@ export default function Home() {
     },
     {
       name: "Abhijeet",
-      image: "/founder2.jpg",
+      image: "/founder2.jpeg",
       bio: "An engineer by qualification & a sports enthusiast with a resolve to improve the lifestyle of the current and upcoming generations. The vision is to create or maintain open spaces in cities/towns where the kids and adults irrespective of their age can enjoy it. Dedicated to blending technology and community engagement to elevate grassroot sports in India.",
     },
   ];
@@ -100,8 +100,8 @@ export default function Home() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
               { value: 3, label: "Years of Experience"},
-              { value: 10, label: "Projects Executed"},
-              { value: 10, label: "Customers Delight"},
+              { value: 30, label: "Projects Executed"},
+              { value: 50, label: "Customers Delight"},
               { value: 300, label: "Students Benifitted"},
             ].map((metric, index) => (
               <div

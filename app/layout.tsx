@@ -82,7 +82,7 @@ export default function RootLayout({
                       {path === "/"
                         ? "HOME"
                         : path === "/building-sports-infra"
-                          ? "BUILDING SPORTS INFRA"
+                          ? "INFRASTRUCTURE"
                           : path.slice(1).toUpperCase()}
                     </Link>
                   </li>
