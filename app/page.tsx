@@ -61,12 +61,12 @@ export default function Home() {
     {
       name: "Kunal",
       image: "/founder1.jpg",
-      bio: "An Ultra runner, Iron Man 70.3 & many more for whom fitness is his way of life. He has inspired an entire generation to believe that staying fit at any age is possible. Kunal brings a years of expertise in sports infrastructure development, project management, and youth outreach programs. His mission is to create accessible, high-quality sports spaces for all.",
+      bio: "An Ultra runner, Iron Man 70.3, endurance cyclist & many more for whom fitness is his way of life. He has inspired an entire generation to believe that staying fit at any age is possible. Kunal brings years of expertise in sports infrastructure development, project management, and youth outreach programs. His mission is to create accessible, high-quality sports spaces for all.",
     },
     {
       name: "Abhijeet",
       image: "/founder2.jpeg",
-      bio: "An engineer by qualification & a sports enthusiast with a resolve to improve the lifestyle of the current and upcoming generations. The vision is to create or maintain open spaces in cities/towns where the kids and adults irrespective of their age can enjoy it. Dedicated to blending technology and community engagement to elevate grassroot sports in India.",
+      bio: "An engineer by qualification & a sports enthusiast with a resolve to improve the lifestyle of the current and upcoming generations. The vision is to create or maintain open spaces in cities/towns where kids and adults irrespective of their age can enjoy it. Dedicated to blending technology and community engagement to elevate grassroot sports in India.",
     },
   ];
   return (
