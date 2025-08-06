@@ -102,7 +102,7 @@ export default function Home() {
               { value: 3, label: "Years of Experience"},
               { value: 30, label: "Projects Executed"},
               { value: 50, label: "Customers Delight"},
-              { value: 300, label: "Students Benifitted"},
+              { value: 300, label: "Students Benefited"},
             ].map((metric, index) => (
               <div
                 key={index}

@@ -19,7 +19,7 @@ const sports = [
     stats: { players: 120, coaches: 4 },
     image: "/bg3.8.jpeg",
     description:
-      `ITC will help you in setting up of a Cricket Turf Ground, as per your requirements, offering quality products, installation services & maintenance services. Not only do we supply & install but we can also help in design of the Turf Ground as per international standards.\n\nProducts & Services provided by ITC:\n\n• Supplier of Artificial Grass for Cricket\n• Infills for Artificial Cricket\n• Installation of Artificial Grass\n• Supplier of Seam Tapes & Glue\n• Sports Net (Sides & Roof)\n• Installation of Sports Net\n• Fabrication & Errection\n• Ground Markings`,
+      `ITC will help you in setting up of a Cricket Turf Ground, as per your requirements, offering quality products, installation services & maintenance services. Not only do we supply & install but we can also help in design of the Turf Ground as per international standards.\n\nProducts & Services provided by ITC:\n\n• Supplier of Artificial Grass for Cricket\n• Infills for Artificial Cricket\n• Installation of Artificial Grass\n• Supplier of Seam Tapes & Glue\n• Sports Net (Sides & Roof)\n• Installation of Sports Net\n• Fabrication & Erection\n• Ground Markings`,
   },
   {
     name: "Football",
@@ -27,7 +27,7 @@ const sports = [
     stats: { players: 95, coaches: 3 },
     image: "/bg2.1.jpeg",
     description:
-      `ITC will help you in setting up of a Football Turf Ground, as per your requirements, offering quality products, installation services & maintenance services. Not only do we supply & install but we can also help in design of the Turf Ground as per international standards.\n\nProducts & Services provided by ITC:\n\n• Supplier of FIFA Accredited Artificial Grass for Football\n• Infills for Artificial Grass\n• Installation of Artificial Grass\n• Supplier of Seam Tapes & Glue\n• Sports Net (Sides & Roof)\n• Installation of Sports Net\n• Fabrication & Errection\n• Ground Markings`,
+      `ITC will help you in setting up of a Football Turf Ground, as per your requirements, offering quality products, installation services & maintenance services. Not only do we supply & install but we can also help in design of the Turf Ground as per international standards.\n\nProducts & Services provided by ITC:\n\n• Supplier of FIFA Accredited Artificial Grass for Football\n• Infills for Artificial Grass\n• Installation of Artificial Grass\n• Supplier of Seam Tapes & Glue\n• Sports Net (Sides & Roof)\n• Installation of Sports Net\n• Fabrication & Erection\n• Ground Markings`,
   },
   {
     name: "Tennis",
@@ -35,7 +35,7 @@ const sports = [
     stats: { players: 40, coaches: 2 },
     image: "/bg1.1.jpeg",
     description:
-      `ITC can help you develop & build 8-layer or 5-layer Acrylic based Tennis Courts as per ITA standards. Our team can build Tennis Court on any base- Asphalt or Concrete depending on the client requirement. The court can also be made using P.P. Tiles which is easy to install with very less installation period when compared to Acrylic based Tennis Courts.\n We will also ensure that the same court can be made Multi-Sport, say, for Badminton, Pickleball. \n Before starting the work, the base is checked to ensure that there are no cracks and it should be level.\n\nProducts & Services provided by ITC:\n\n• Supplier of Acrylic Paints/P.P. Tiles\n• Application of Acrylic Paints/P.P. Tiles as per Standard Procedure\n• Supplier of Sports Net (sides)\n• Installation of Sports Net (sides)\n• Fabrication & Errection\n• Court Markings`,
+      `ITC can help you develop & build 8-layer or 5-layer Acrylic based Tennis Courts as per ITA standards. Our team can build Tennis Court on any base- Asphalt or Concrete depending on the client requirement. The court can also be made using P.P. Tiles which is easy to install with very less installation period when compared to Acrylic based Tennis Courts.\n We will also ensure that the same court can be made Multi-Sport, say, for Badminton, Pickleball. \n Before starting the work, the base is checked to ensure that there are no cracks and it should be level.\n\nProducts & Services provided by ITC:\n\n• Supplier of Acrylic Paints/P.P. Tiles\n• Application of Acrylic Paints/P.P. Tiles as per Standard Procedure\n• Supplier of Sports Net (sides)\n• Installation of Sports Net (sides)\n• Fabrication & Erection\n• Court Markings`,
   },
   {
     name: "Basketball",
@@ -43,7 +43,7 @@ const sports = [
     stats: { players: 40, coaches: 2 },
     image: "/Basketball Court-Acrylic.jpg",
     description:
-      `ITC can help you develop & design an IBA certified Basketball Court using Acrylic colours, P.P. Tiles, Wooden Flooring or P.U. Flooring as required by the client.\n We will also ensure that the same court can be made Multi-Sport, say, for Badminton or Pickleball or Tennis.\n \n\nProducts & Services provided by ITC:\n\n• Supplier of Acrylic Paints/P.P. Tiles/Wooden Flooring/P.U\n• Application of Acrylic Paints/P.P. Tiles/Wooden Flooring/P.U. as per Standard Procedure\n• Supplier of Sports Net (sides)\n• Installation of Sports Net (sides)\n• Fabrication & Errection\n• Court Markings`,
+      `ITC can help you develop & design an IBA certified Basketball Court using Acrylic colours, P.P. Tiles, Wooden Flooring or P.U. Flooring as required by the client.\n We will also ensure that the same court can be made Multi-Sport, say, for Badminton or Pickleball or Tennis.\n \n\nProducts & Services provided by ITC:\n\n• Supplier of Acrylic Paints/P.P. Tiles/Wooden Flooring/P.U\n• Application of Acrylic Paints/P.P. Tiles/Wooden Flooring/P.U. as per Standard Procedure\n• Supplier of Sports Net (sides)\n• Installation of Sports Net (sides)\n• Fabrication & Erection\n• Court Markings`,
   },
   {
     name: "Pickleball",
@@ -51,7 +51,7 @@ const sports = [
     stats: { players: 40, coaches: 2 },
     image: "/Pickleball Court-Acrylic-1.jpg",
     description:
-      `ITC can help you build state-of-the art Pickleball Court, Acrylic or P.P. Tiles on any base- Asphalt or Concrete, depending on client requirement. P.P. Tiles are easy to install with very less installation period when compared to Acrylic based Tennis Courts.\n Before starting the work, the base is checked to ensure that there are no cracks and it should be level.\n We will also ensure that the same court can be made Multi-Sport, say, for Badminton.\n\nProducts & Services provided by ITC:\n\n• Supplier of Acrylic Paints/P.P. Tiles\n• Application of Acrylic Paints/P.P. Tiles as per Standard Procedure\n• Supplier of Sports Net (sides)\n• Installation of Sports Net (sides)\n• Fabrication & Errection\n• Court Markings`,
+      `ITC can help you build state-of-the art Pickleball Court, Acrylic or P.P. Tiles on any base- Asphalt or Concrete, depending on client requirement. P.P. Tiles are easy to install with very less installation period when compared to Acrylic based Tennis Courts.\n Before starting the work, the base is checked to ensure that there are no cracks and it should be level.\n We will also ensure that the same court can be made Multi-Sport, say, for Badminton.\n\nProducts & Services provided by ITC:\n\n• Supplier of Acrylic Paints/P.P. Tiles\n• Application of Acrylic Paints/P.P. Tiles as per Standard Procedure\n• Supplier of Sports Net (sides)\n• Installation of Sports Net (sides)\n• Fabrication & Erection\n• Court Markings`,
   },
   {
     name: "Athletic Track",
@@ -67,7 +67,7 @@ const sports = [
     stats: { players: 40, coaches: 2 },
     image: "/Skating Rink.jpeg",
     description:
-      `ITC can help you develop & build Acrylic based Skating Rink as per the available area at the client’s site. Our team can build as per Standard Dimensions, subject to area availability, on Asphalt or Concrete base.\n\n• Supplier of Acrylic Paints\n• Application of Acrylic Paints as per Standard Procedure\n• Supplier of Sports Net (sides)\n• Installation of Sports Net (sides)\n• Fabrication & Errection\n• Markings`,
+      `ITC can help you develop & build Acrylic based Skating Rink as per the available area at the client’s site. Our team can build as per Standard Dimensions, subject to area availability, on Asphalt or Concrete base.\n\n• Supplier of Acrylic Paints\n• Application of Acrylic Paints as per Standard Procedure\n• Supplier of Sports Net (sides)\n• Installation of Sports Net (sides)\n• Fabrication & Erection\n• Markings`,
   },
 ];
 
